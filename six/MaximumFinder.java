@@ -3,7 +3,7 @@ package six;
 import java.util.Scanner;
 
 public class MaximumFinder {
-    public static void main(String[] args){
+    public static void main( String[] args ){
         try(Scanner input = new Scanner( System.in )){
             System.out.print("Enter three floating poin t values separated by spaces: ");
 
