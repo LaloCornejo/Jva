@@ -1,4 +1,4 @@
-package School;
+package SchoolPOO;
 
 import java.util.Scanner;
 
