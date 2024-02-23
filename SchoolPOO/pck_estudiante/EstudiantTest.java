@@ -1,6 +1,7 @@
 package SchoolPOO.pck_estudiante;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class EstudiantTest {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class EstudiantTest {
             String nombre, programaEducativo;
             float promedioGeneral;
 
-            Estuciante estudiante = new Estuciante();
+            Estudiante estudiante = new Estudiante();
             noCuenta = input.nextInt();
             estudiante.setNoCuenta(noCuenta);
             nombre = input.next();
@@ -20,7 +21,7 @@ public class EstudiantTest {
             grupo = input.nextInt();
             estudiante.setGrupo(grupo);
             programaEducativo = input.next();
-            estudiante.setProgrmaEducativo(programaEducativo);
+            estudiante.setProgramaEducativo(programaEducativo);
             promedioGeneral = input.nextFloat();
             estudiante.setPromedioGeneral(promedioGeneral);
             
@@ -40,7 +41,23 @@ public class EstudiantTest {
                 estudiante.getPromedioGeneral()
             );
 
+            Estudiante estu2 = new Estudiante();
+
+            estu2.setNoCuenta(Integer.parseInt(JOptionPane.showInputDialog("ID: ", "3000")));
+            estu2.setNombre(JOptionPane.showInputDialog("Nombre: ", "Juanito"));
+            estu2.setSemestre(Integer.parseInt(JOptionPane.showInputDialog("Semestre: ", "3")));
+            estu2.setGrupo(Integer.parseInt(JOptionPane.showInputDialog("Grupo: ", "1")));
+            estu2.setProgramaEducativo(JOptionPane.showInputDialog("Programa Educativo: ", "Ingeniería en Sistemas Computacionales"));
+            estu2.setPromedioGeneral(Float.parseFloat(JOptionPane.showInputDialog("Promedio General: ", "9.5")));
+
+            String info = String.format("Nombre: %s\nNum. Cuenta: %d\nSemestre: %d\nGrupo: %d\nPrograma: %s\nPromedio: %f", estudiante.getNombre(), estudiante.getNoCuenta(), estudiante.getSemestre(), estudiante.getGrupo(), estudiante.getProgramaEducativo(), estudiante.getPromedioGeneral());
+
+            JOptionPane.showMessageDialog(null, info, "info", JOptionPane.PLAIN_MESSAGE);
+
+            JOptionPane.showMessageDialog(null, estudiante.getDatos());
+
             System.out.println("Usando el método getDatos():");
+            System.out.println(info);
             System.out.println(estudiante.getDatos());
         }
     }

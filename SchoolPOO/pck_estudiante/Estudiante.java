@@ -1,12 +1,30 @@
 package SchoolPOO.pck_estudiante;
 
-public class Estuciante {
+public class Estudiante {
     private String nombre;
     private int noCuenta;
     private int semestre;
     private int grupo;
     private String programaEducativo;
     private float promedioGeneral;
+
+    public Estudiante() {
+        this.noCuenta = 0;
+        this.nombre = null;
+        this.semestre = 0;
+        this.grupo = 0;
+        this.programaEducativo = null;
+        this.promedioGeneral = 0.0f;
+    }
+
+    public Estudiante(int noCuenta, String nombre, int semestre, int grupo, String programaEducativo, float promedioGeneral) {
+        this.noCuenta = noCuenta;
+        this.nombre = nombre;
+        this.semestre = semestre;
+        this.grupo = grupo;
+        this.programaEducativo = programaEducativo;
+        this.promedioGeneral = promedioGeneral;
+    }
 
     public void setNoCuenta(int noCuenta) {
         this.noCuenta = noCuenta;
@@ -22,7 +40,7 @@ public class Estuciante {
         this.grupo = grupo;
     }
 
-    public void setProgrmaEducativo(String programaEducativo) {
+    public void setProgramaEducativo(String programaEducativo) {
         this.programaEducativo = programaEducativo;
     }
 
@@ -66,4 +84,3 @@ public class Estuciante {
 }
 
 //Jesus Eduardo Cornejo Clavel 3ro 1
-//que es un contructor y que tipos hay
