@@ -58,7 +58,7 @@ public class Empleado {
   }
 
   public double getVentas( int mes ){
-    return this.ventas[mes];
+      return this.ventas[mes];
   }
 
   public double getVentasAnuales(){
