@@ -1,11 +1,11 @@
-package SchoolPOO.pck_Felinos;
+package SchoolPOO.pck_Felino;
 
 public class Salvajes extends Felino {
   protected String especie;
   protected String region;
 
-  public Salvajes( int idFelino, String color, String tamanio, String especie, String region ){
-    super( idFelino, color, tamanio );
+  public Salvajes( int idFelino, String color, String tamano, String especie, String region ){
+    super( idFelino, color, tamano );
     this.especie = especie;
     this.region = region;
   }
@@ -32,6 +32,6 @@ public class Salvajes extends Felino {
 
   @Override
   public String getDatos(){
-    return "==- SALVAJES -==\n" + "ID: " + getIDFelino() + "\nColor: " + getColor() + "\nTamanio: " + getTamanio() + "\nEspecie: " + getEspecie() + "\nRegion: " + getRegion();
+    return "==- SALVAJES -==\n" + "ID: " + getIDFelino() + "\nColor: " + getColor() + "\nTamanio: " + getTamano() + "\nEspecie: " + getEspecie() + "\nRegion: " + getRegion();
   }
 }

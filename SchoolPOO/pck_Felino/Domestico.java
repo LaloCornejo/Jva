@@ -1,18 +1,18 @@
-package SchoolPOO.pck_Felinos;
+package SchoolPOO.pck_Felino;
 
-public class Domesticos extends Felino {
+public class Domestico extends Felino {
   protected String nombre;
   protected String dueno;
   protected int noVacunas;
 
-  public Domesticos( int idFelino, String color, String tamanio  String nombre, String dueno, int noVacunas ){
-    super( idFelino , color, tamanio)
+  public Domestico( int idFelino, String color, String tamano,  String nombre, String dueno, int noVacunas ){
+    super( idFelino , color, tamano);
     this.nombre = nombre;
-    this.dueno = dunoe;
+    this.dueno = dueno;
     this.noVacunas = noVacunas;
   }
 
-  public Domesticos(){
+  public Domestico(){
     this( 0, null, null, null, null, 0 );
   }
 
@@ -42,6 +42,6 @@ public class Domesticos extends Felino {
 
   @Override
   public String getDatos(){
-    return "==- DOMESTICOS -==\n" + "ID: " + getIDFelino() + "\nColor: " + getColor() + "\nTamanio: " + getTamanio() + "\nNombre: " + getNombre() + "\nDueno: " + getDueno() + "\nNo.Vacunas: " + getNoVacunas();
+    return "==- Domestico -==\n" + "ID: " + getIDFelino() + "\nColor: " + getColor() + "\ntamano: " + getTamano() + "\nNombre: " + getNombre() + "\nDueno: " + getDueno() + "\nNo.Vacunas: " + getNoVacunas();
   }
 }
