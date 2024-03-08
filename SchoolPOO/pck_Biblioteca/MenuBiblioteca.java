@@ -168,6 +168,7 @@ public class MenuBiblioteca {
             for (int i = 0; i < contL; i++) {
               if (Libros[i].getReferencia().equals(ref)) {
                 JOptionPane.showMessageDialog(null, Libros[i].getDatos(), "Detalle del libro", JOptionPane.PLAIN_MESSAGE);
+                break;
               }
             }
           }
@@ -188,6 +189,7 @@ public class MenuBiblioteca {
             for (int i = 0; i < contR; i++) {
               if (Revistas[i].getReferencia().equals(ref)) {
                 JOptionPane.showMessageDialog(null, Revistas[i].getDatos(), "Detalle de la revista", JOptionPane.PLAIN_MESSAGE);
+                break;
               }
             }
           }
