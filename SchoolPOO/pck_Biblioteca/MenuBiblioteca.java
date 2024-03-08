@@ -22,7 +22,7 @@ public class MenuBiblioteca {
         try {
           op = Integer.parseInt(JOptionPane.showInputDialog(null, menu));
         } catch (NumberFormatException e) {
-          JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+          JOptionPane.showMessageDialog(null, "Error: Opción no valida ", "Error", JOptionPane.ERROR_MESSAGE);
           op = 0;
         }
       } while (op == 0);
@@ -64,24 +64,25 @@ public class MenuBiblioteca {
             do {
               try {
                 np = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de paginas del Libro: "));
-                if ( np  < 20 ){
-                  JOptionPane.showMessageDialog(null, "Error: No suficientes paginas", "Error", JOptionPane.ERROR_MESSAGE);
-                  anio = 0;
+                if (np < 20) {
+                  JOptionPane.showMessageDialog(null, "Error: No suficientes paginas", "Error",
+                      JOptionPane.ERROR_MESSAGE);
+                  np = 0;
                 }
               } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Error");
+                JOptionPane.showMessageDialog(null, "Error: Debe ser un valor numérico");
                 np = 0;
               }
             } while (np == 0);
             do {
               try {
                 anio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el anio de publicación del Libro: "));
-                if (anio < 1900 || anio > 2024 ) {
+                if (anio < 1900 || anio > 2024) {
                   JOptionPane.showMessageDialog(null, "Error: Anio no valido", "Error", JOptionPane.ERROR_MESSAGE);
                   anio = 0;
                 }
               } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Error: Debe ser ");
+                JOptionPane.showMessageDialog(null, "Error: Debe ser un valor numérico");
                 anio = 0;
               }
             } while (anio == 0);
@@ -113,12 +114,12 @@ public class MenuBiblioteca {
             do {
               try {
                 anio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el anio de publicación de la revista: "));
-                if (anio < 1900 || anio > 2024 ) {
+                if (anio < 1900 || anio > 2024) {
                   JOptionPane.showMessageDialog(null, "Error: Anio no valido", "Error", JOptionPane.ERROR_MESSAGE);
                   anio = 0;
                 }
               } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Error: Debe ser ");
+                JOptionPane.showMessageDialog(null, "Error: Debe ser numero");
                 anio = 0;
               }
             } while (anio == 0);
@@ -130,8 +131,8 @@ public class MenuBiblioteca {
                 numero = -1;
               }
             } while (numero == -1);
-            contR++;
             Revistas[contR] = new Revista(ref, titulo, anio, numero);
+            contR++;
           } else {
             JOptionPane.showMessageDialog(null, "No hay espacio para mas revistas", "Error", JOptionPane.ERROR_MESSAGE);
           }
@@ -140,30 +141,34 @@ public class MenuBiblioteca {
           if (contL <= 0) {
             JOptionPane.showMessageDialog(null, "No hay libros registrados", "Lista de Libros",
                 JOptionPane.PLAIN_MESSAGE);
+            break;
           } else {
             infoLibros = "Referencia\tTitulo\tAutor\tEditorial\n" +
-                "--------------------------------------------------";
+                "--------------------------------------------------\n";
             for (int i = 0; i < contL; i++) {
-              infoLibros = Libros[i].getReferencia() + "\t" + Libros[i].getTitulo() + "\t" + Libros[i].getAutor() + "\t"
+              infoLibros = infoLibros + Libros[i].getReferencia() + "\t" + Libros[i].getTitulo() + "\t"
+                  + Libros[i].getAutor() + "\t"
                   + Libros[i].getEditorial() + "\n";
             }
+            JOptionPane.showMessageDialog(null, infoLibros, "Lista de Libros", JOptionPane.PLAIN_MESSAGE);
           }
-          JOptionPane.showMessageDialog(null, infoLibros, "Lista de Libros", JOptionPane.PLAIN_MESSAGE);
           break;
         case 4:
           if (contR <= 0) {
             JOptionPane.showMessageDialog(null, "No hay revistas registradas", "Lista de Revistas",
                 JOptionPane.PLAIN_MESSAGE);
+            break;
           } else {
             infoRevistas = "Referencia\tTitulo\tAño\tNumero\n" +
-                "--------------------------------------------------";
+                "--------------------------------------------------\n";
             for (int i = 0; i < contR; i++) {
-              infoRevistas = Revistas[i].getReferencia() + "\t" + Revistas[i].getTitulo() + "\t" + Revistas[i].getAnioPublication() + "\t"
+              infoRevistas = infoRevistas + Revistas[i].getReferencia() + "\t" + Revistas[i].getTitulo() + "\t"
+                  + Revistas[i].getAnioPublication() + "\t"
                   + Revistas[i].getNumero() + "\n";
             }
+            JOptionPane.showMessageDialog(null, infoRevistas, "Lista de Revistas", JOptionPane.PLAIN_MESSAGE);
+            break;
           }
-          JOptionPane.showMessageDialog(null, infoRevistas, "Lista de Revistas", JOptionPane.PLAIN_MESSAGE);
-          break;
         case 5:
           if (contL <= 0) {
             JOptionPane.showMessageDialog(null, "No hay libros registrados", "Lista de Libros",
@@ -179,10 +184,12 @@ public class MenuBiblioteca {
             } while (ref == null);
             for (int i = 0; i < contL; i++) {
               if (Libros[i].getReferencia().equals(ref)) {
-                JOptionPane.showMessageDialog(null, Libros[i].getDatos(), "Detalle del libro", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, Libros[i].getDatos(), "Detalle del libro",
+                    JOptionPane.PLAIN_MESSAGE);
                 break;
-              }
-            }
+              }else if ( i == contL - 1 ){
+                JOptionPane.showMessageDialog(null,"No existe ningún articulo con esa referencia" , "NULL", i);
+              }            }
           }
           break;
         case 6:
@@ -200,8 +207,11 @@ public class MenuBiblioteca {
             } while (ref == null);
             for (int i = 0; i < contR; i++) {
               if (Revistas[i].getReferencia().equals(ref)) {
-                JOptionPane.showMessageDialog(null, Revistas[i].getDatos(), "Detalle de la revista", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, Revistas[i].getDatos(), "Detalle de la revista",
+                    JOptionPane.PLAIN_MESSAGE);
                 break;
+              }else if ( i == contR - 1 ){
+                JOptionPane.showMessageDialog(null,"No existe ningún articulo con esa referencia" , "NULL", i);
               }
             }
           }
