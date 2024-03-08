@@ -64,19 +64,27 @@ public class MenuBiblioteca {
             do {
               try {
                 np = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de paginas del Libro: "));
+                if ( np  < 20 ){
+                  JOptionPane.showMessageDialog(null, "Error: No suficientes paginas", "Error", JOptionPane.ERROR_MESSAGE);
+                  anio = 0;
+                }
               } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Error");
-                np = -1;
+                np = 0;
               }
-            } while (np == -1);
+            } while (np == 0);
             do {
               try {
                 anio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el anio de publicación del Libro: "));
+                if (anio < 1900 || anio > 2024 ) {
+                  JOptionPane.showMessageDialog(null, "Error: Anio no valido", "Error", JOptionPane.ERROR_MESSAGE);
+                  anio = 0;
+                }
               } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Error: Debe ser ");
-                anio = -1;
+                anio = 0;
               }
-            } while (anio == -1);
+            } while (anio == 0);
 
             Libros[contL] = new Libro(ref, titulo, autor, edit, np, anio);
             contL++;
@@ -105,11 +113,15 @@ public class MenuBiblioteca {
             do {
               try {
                 anio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el anio de publicación de la revista: "));
+                if (anio < 1900 || anio > 2024 ) {
+                  JOptionPane.showMessageDialog(null, "Error: Anio no valido", "Error", JOptionPane.ERROR_MESSAGE);
+                  anio = 0;
+                }
               } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Error: Debe ser ");
-                anio = -1;
+                anio = 0;
               }
-            } while (anio == -1);
+            } while (anio == 0);
             do {
               try {
                 numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de la revista: "));
