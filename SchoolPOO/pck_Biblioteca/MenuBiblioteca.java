@@ -32,6 +32,11 @@ public class MenuBiblioteca {
             do {
               try {
                 ref = JOptionPane.showInputDialog("Ingrese la Referencia del libro");
+                if (buscarReferencia(ref, Libros, contL) != -1) {
+                  JOptionPane.showMessageDialog(null, "Error: Referencia ya existe", "Error", JOptionPane.ERROR_MESSAGE);
+                  ref = null;
+                  break;
+                }
               } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Error");
                 ref = null;
@@ -224,6 +229,14 @@ public class MenuBiblioteca {
           break;
       }
     } while (op != 7);
-
   }
+  static int buscarReferencia(String ref, Libro[] Libros, int contL) {
+    for (int i = 0; i < contL; i++) {
+      if (Libros[i].getReferencia().equals(ref)) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
 }
