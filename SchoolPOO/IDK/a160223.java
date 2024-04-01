@@ -1,5 +1,5 @@
 // Jesus Eduardo Cornejo Clavel 3ro 1
-package SchoolPOO;
+package SchoolPOO.IDK;
 import java.util.ArrayList;
 import java.util.Scanner;
 

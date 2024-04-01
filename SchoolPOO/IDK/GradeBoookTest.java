@@ -1,3 +1,4 @@
+package SchoolPOO.IDK;
 // public class GradeBoookTest{
 
 //     public static void main(String[] args){

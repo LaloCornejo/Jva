@@ -1,4 +1,4 @@
-package SchoolPOO;
+package SchoolPOO.IDK;
 
 public class Clases {
   private int x;
