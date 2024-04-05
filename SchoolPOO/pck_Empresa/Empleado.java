@@ -46,8 +46,8 @@ public class Empleado {
     return nombre;
   }
 
-  public String getSalarioBase() {
-    return "$" + salarioBase;
+  public double getSalarioBase() {
+    return  salarioBase;
   }
 
   public String getDatos() {
