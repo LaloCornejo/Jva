@@ -6,8 +6,12 @@ public class Perecedero {
   private int idArticulo;
   private String description;
   private String marca;
+  private String contenido;
+  private String categoria;
+  private String status;
   private Fecha fechaC = new Fecha();
   private Fecha fechaCaducidad;
+  private float precio;
 
   public Perecedero(int idArticulo, String description, String marca, Fecha fechaCaducidad) {
     this.idArticulo = idArticulo;
@@ -35,6 +39,22 @@ public class Perecedero {
     this.marca = marca;
   }
 
+  public void setPrecio(float precio) {
+    this.precio = precio;
+  }
+
+  public void setContenido(String contenido) {
+    this.contenido = contenido;
+  }
+
+  public void setCategoria(String categoria) {
+    this.categoria = categoria;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
   public void setFechaCaducidad(Fecha fechaCaducidad) {
     this.fechaCaducidad = fechaC;
   }
@@ -51,6 +71,22 @@ public class Perecedero {
     return description;
   }
 
+  public String getContenido() {
+    return contenido;
+  }
+
+  public String getCategoria() {
+    return categoria;
+  }
+
+  public String getStatus() {
+    return status;
+  }
+
+  public float getPrecio() {
+    return precio;
+  }
+
   public String getMarca() {
     return marca;
   }
@@ -59,9 +95,9 @@ public class Perecedero {
     return fechaCaducidad.getFecha();
   }
 
-  String perecederoHeaderString = "\n\n\t\t==- Articulo Perecedero ==-\nID\tDescripcion\tMarca\tFecha de Caducidad\n  ------------------------------------------------------------\n";
+  String perecederoHeaderString = "\n\n\t\t==- Articulo Perecedero ==-\nID\tDescription\tMarca\tFecha de caducidad\tPrecio\tContenido\tCategoria\tStatus\n-----------------------------------------------------------------------------------------\n";
 
   public String getDatos() {
-    return perecederoHeaderString + idArticulo + "\t" + description + "\t\t" + marca + "\t" + fechaCaducidad.getFecha();
+    return perecederoHeaderString + getIdArticulo() + "\t" + getDescription() + "\t\t" + getMarca() + "\t" + getFechaCaducidad() + "\t" + getPrecio() + "\t" + getContenido() + "\t" + getCategoria() + "\t" + getStatus();
   }
 }

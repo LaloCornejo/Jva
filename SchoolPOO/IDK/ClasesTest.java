@@ -1,4 +1,4 @@
-package SchoolPOO;
+package SchoolPOO.IDK;
 
 import java.util.Scanner;
 

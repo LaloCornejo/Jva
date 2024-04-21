@@ -1,3 +1,4 @@
+package SchoolPOO.IDK;
 import javax.swing.JOptionPane;
 
 public class NameDialog {

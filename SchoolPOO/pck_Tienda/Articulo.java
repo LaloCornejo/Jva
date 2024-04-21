@@ -7,8 +7,12 @@ public class Articulo {
   private int idArticulo;
   private String description;
   private String marca;
+  private String contenido;
+  private String categoria;
+  private String status;
   private Fecha fechaC = new Fecha();
   private Fecha fechaCaducidad;
+  private float precio;
 
 
   public Articulo(int idArticulo, String description, String marca, Fecha fechaCaducidad) {
@@ -45,6 +49,22 @@ public class Articulo {
     this.fechaCaducidad.setFecha(dia, mes, anio);
   }
 
+  public void setPrecio( float precio ) {
+    this.precio = precio;
+  }
+
+  public void setContenido(String contenido) {
+    this.contenido = contenido;
+  }
+
+  public void setCategoria( String categoria ){
+    this.categoria = categoria;
+  }
+
+  public void setStatus( String status ){
+    this.status = status;
+  }
+
   public int getIdArticulo() {
     return idArticulo;
   }
@@ -61,6 +81,22 @@ public class Articulo {
     return fechaCaducidad.getFecha();
   }
 
+  public float getPrecio(){
+    return precio;
+  }
+
+  public String getContenido(){
+    return contenido;
+  }
+
+  public String getCategoria(){
+    return categoria;
+  }
+
+  public String getStatus() {
+    return status;
+  }
+  
   public boolean Perecedero() {
     Calendar fechaActual = Calendar.getInstance();
     int dia = fechaActual.get(Calendar.DATE);
@@ -102,9 +138,9 @@ public class Articulo {
     }
   }
 
-  String headerString = "\n\nID\tDescription\tMarca\tFecha de caducidad\n--------------------------------------------------\n";
+  String headerString = "\n\nID\tDescription\tMarca\tFecha de caducidad\tPrecio\tContenido\tCategoria\tStatus\n-----------------------------------------------------------------------------------------\n";
 
   public String getDatos() {
-    return headerString + getIdArticulo() + "\t" + getDescription() + "\t\t" + getMarca() + "\t" + getFechaCaducidad();
+    return headerString + getIdArticulo() + "\t" + getDescription() + "\t\t" + getMarca() + "\t" + getFechaCaducidad() + "\t" + getPrecio() + "\t" + getContenido() + "\t" + getCategoria() + "\t" + getStatus();
   }
 }

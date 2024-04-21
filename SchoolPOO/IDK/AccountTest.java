@@ -1,3 +1,4 @@
+package SchoolPOO.IDK;
 import java.util.Scanner;
 
 public class AccountTest {

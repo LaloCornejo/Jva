@@ -1,3 +1,4 @@
+package SchoolPOO.IDK;
 public class Account {
     
     private double balance;
