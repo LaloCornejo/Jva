@@ -1,3 +1,5 @@
+// Jesus Eduardo Cornejo Clavel, 3ro 1
+
 import javax.swing.*;
 
 public class CalculatorGUI extends JFrame {
@@ -127,7 +129,7 @@ public class CalculatorGUI extends JFrame {
     }
 
     public static void main(String[] args) {
-        CalculatorGUI myCalculator = new CalculatorGUI();
+        new CalculatorGUI();
     }
 }
 
