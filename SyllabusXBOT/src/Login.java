@@ -8,6 +8,7 @@ public class Login extends JFrame {
     private JButton registerButton;
     private JButton loginButton;
     private JTextPane textPane1;
+    private JButton logoHome;
 
     public Login() {
         setContentPane(Login);
@@ -15,6 +16,12 @@ public class Login extends JFrame {
         setSize(500, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
+
+        logoHome.addActionListener(e-> {
+            new Landing();
+            setVisible(false);
+            dispose();
+        });
 
 
         loginButton.addActionListener(e -> {

@@ -5,7 +5,9 @@
     <constraints>
       <xy x="17" y="13" width="1110" height="829"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-15069147"/>
+    </properties>
     <border type="none"/>
     <children>
       <grid id="6233f" binding="Calendario" layout-manager="GridLayoutManager" row-count="5" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -13,7 +15,11 @@
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-15069147"/>
+          <foreground color="-1"/>
+          <inheritsPopupMenu value="true"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="c7fe1" class="javax.swing.JTextPane" binding="calendarioText">
@@ -24,30 +30,23 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-15069147"/>
+              <disabledTextColor color="-1"/>
               <font name="JetBrains Mono" size="24" style="1"/>
+              <foreground color="-1"/>
               <margin top="100" left="50" bottom="100" right="50"/>
               <text value="Calendario"/>
             </properties>
           </component>
           <vspacer id="beb1a">
             <constraints>
-              <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false">
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <minimum-size width="100" height="-1"/>
                 <preferred-size width="100" height="-1"/>
                 <maximum-size width="100" height="-1"/>
               </grid>
             </constraints>
           </vspacer>
-          <component id="890dc" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="192" height="17"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="User"/>
-            </properties>
-          </component>
           <hspacer id="af4c4">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
@@ -75,29 +74,26 @@
               </grid>
             </constraints>
           </vspacer>
-          <component id="89f42" class="javax.swing.JButton" binding="homeButton" default-binding="true">
-            <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <maximum-size width="-1" height="50"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Home"/>
-            </properties>
-          </component>
-          <tabbedpane id="1c1d3" binding="tabbedPane2" default-binding="true">
+          <tabbedpane id="1c1d3" binding="semesterCalendar">
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-15069147"/>
+              <foreground color="-1"/>
+              <tabPlacement value="2"/>
+            </properties>
             <border type="none"/>
             <children>
-              <grid id="1650d" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="1650d" binding="Febrero" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <tabbedpane title="Febrero"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <background color="-15069147"/>
+                  <foreground color="-1"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <grid id="62797" layout-manager="GridLayoutManager" row-count="6" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -105,7 +101,9 @@
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <background color="-15069147"/>
+                    </properties>
                     <border type="none"/>
                     <children>
                       <component id="9f009" class="javax.swing.JButton" binding="a1Button" default-binding="true">
@@ -115,6 +113,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="1"/>
                         </properties>
                       </component>
@@ -125,6 +127,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="2"/>
                         </properties>
                       </component>
@@ -135,6 +141,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="3"/>
                         </properties>
                       </component>
@@ -145,6 +155,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="4"/>
                         </properties>
                       </component>
@@ -155,6 +169,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="5"/>
                         </properties>
                       </component>
@@ -165,6 +183,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="6"/>
                         </properties>
                       </component>
@@ -175,6 +197,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="7"/>
                         </properties>
                       </component>
@@ -185,6 +211,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="8"/>
                         </properties>
                       </component>
@@ -195,6 +225,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="9"/>
                         </properties>
                       </component>
@@ -205,6 +239,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="10"/>
                         </properties>
                       </component>
@@ -215,6 +253,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="11"/>
                         </properties>
                       </component>
@@ -225,6 +267,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="12"/>
                         </properties>
                       </component>
@@ -235,6 +281,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="13"/>
                         </properties>
                       </component>
@@ -245,6 +295,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="14"/>
                         </properties>
                       </component>
@@ -255,6 +309,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="15"/>
                         </properties>
                       </component>
@@ -265,6 +323,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="16"/>
                         </properties>
                       </component>
@@ -275,6 +337,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="17"/>
                         </properties>
                       </component>
@@ -285,6 +351,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="18"/>
                         </properties>
                       </component>
@@ -295,6 +365,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="19"/>
                         </properties>
                       </component>
@@ -305,6 +379,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="20"/>
                         </properties>
                       </component>
@@ -315,6 +393,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="21"/>
                         </properties>
                       </component>
@@ -325,6 +407,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="22"/>
                         </properties>
                       </component>
@@ -335,6 +421,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="23"/>
                         </properties>
                       </component>
@@ -345,6 +435,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="24"/>
                         </properties>
                       </component>
@@ -355,6 +449,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="25"/>
                         </properties>
                       </component>
@@ -365,6 +463,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="26"/>
                         </properties>
                       </component>
@@ -375,6 +477,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="27"/>
                         </properties>
                       </component>
@@ -385,6 +491,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="28"/>
                         </properties>
                       </component>
@@ -395,6 +505,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="29"/>
                         </properties>
                       </component>
@@ -405,6 +519,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="30"/>
                         </properties>
                       </component>
@@ -415,6 +533,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="31"/>
                         </properties>
                       </component>
@@ -425,6 +547,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -435,6 +561,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -445,6 +575,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -454,6 +588,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Domingo"/>
                         </properties>
                       </component>
@@ -463,6 +598,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Lunes"/>
                         </properties>
                       </component>
@@ -472,6 +608,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Martes"/>
                         </properties>
                       </component>
@@ -481,6 +618,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Miercoles"/>
                         </properties>
                       </component>
@@ -490,6 +628,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Jueves"/>
                         </properties>
                       </component>
@@ -499,6 +638,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Viernes"/>
                         </properties>
                       </component>
@@ -508,6 +648,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Sabado"/>
                         </properties>
                       </component>
@@ -515,12 +656,15 @@
                   </grid>
                 </children>
               </grid>
-              <grid id="9809a" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="9809a" binding="Marzo" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <tabbedpane title="Marzo"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <background color="-15069147"/>
+                  <foreground color="-1"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <grid id="a079" layout-manager="GridLayoutManager" row-count="6" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -528,7 +672,9 @@
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <background color="-15069147"/>
+                    </properties>
                     <border type="none"/>
                     <children>
                       <component id="acc86" class="javax.swing.JButton" default-binding="true">
@@ -538,6 +684,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="1"/>
                         </properties>
                       </component>
@@ -548,6 +698,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="2"/>
                         </properties>
                       </component>
@@ -558,6 +712,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="3"/>
                         </properties>
                       </component>
@@ -568,6 +726,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="4"/>
                         </properties>
                       </component>
@@ -578,6 +740,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="5"/>
                         </properties>
                       </component>
@@ -588,6 +754,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="6"/>
                         </properties>
                       </component>
@@ -598,6 +768,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="7"/>
                         </properties>
                       </component>
@@ -608,6 +782,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="8"/>
                         </properties>
                       </component>
@@ -618,6 +796,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="9"/>
                         </properties>
                       </component>
@@ -628,6 +810,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="10"/>
                         </properties>
                       </component>
@@ -638,6 +824,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="11"/>
                         </properties>
                       </component>
@@ -648,6 +838,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="12"/>
                         </properties>
                       </component>
@@ -658,6 +852,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="13"/>
                         </properties>
                       </component>
@@ -668,6 +866,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="14"/>
                         </properties>
                       </component>
@@ -678,6 +880,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="15"/>
                         </properties>
                       </component>
@@ -688,6 +894,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="16"/>
                         </properties>
                       </component>
@@ -698,6 +908,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="17"/>
                         </properties>
                       </component>
@@ -708,6 +922,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="18"/>
                         </properties>
                       </component>
@@ -718,6 +936,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="19"/>
                         </properties>
                       </component>
@@ -728,6 +950,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="20"/>
                         </properties>
                       </component>
@@ -738,6 +964,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="21"/>
                         </properties>
                       </component>
@@ -748,6 +978,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="22"/>
                         </properties>
                       </component>
@@ -758,6 +992,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="23"/>
                         </properties>
                       </component>
@@ -768,6 +1006,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="24"/>
                         </properties>
                       </component>
@@ -778,6 +1020,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="25"/>
                         </properties>
                       </component>
@@ -788,6 +1034,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="26"/>
                         </properties>
                       </component>
@@ -798,6 +1048,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="27"/>
                         </properties>
                       </component>
@@ -808,6 +1062,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="28"/>
                         </properties>
                       </component>
@@ -818,6 +1076,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="29"/>
                         </properties>
                       </component>
@@ -828,6 +1090,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="30"/>
                         </properties>
                       </component>
@@ -838,6 +1104,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="31"/>
                         </properties>
                       </component>
@@ -848,6 +1118,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -858,6 +1132,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -868,6 +1146,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -877,6 +1159,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Domingo"/>
                         </properties>
                       </component>
@@ -886,6 +1169,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Lunes"/>
                         </properties>
                       </component>
@@ -895,6 +1179,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Martes"/>
                         </properties>
                       </component>
@@ -904,6 +1189,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Miercoles"/>
                         </properties>
                       </component>
@@ -913,6 +1199,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Jueves"/>
                         </properties>
                       </component>
@@ -922,6 +1209,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Viernes"/>
                         </properties>
                       </component>
@@ -931,6 +1219,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Sabado"/>
                         </properties>
                       </component>
@@ -938,12 +1227,15 @@
                   </grid>
                 </children>
               </grid>
-              <grid id="54fd4" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="54fd4" binding="Abril" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <tabbedpane title="Abril"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <background color="-15069147"/>
+                  <foreground color="-1"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <grid id="78bcc" layout-manager="GridLayoutManager" row-count="6" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -951,7 +1243,9 @@
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <background color="-15069147"/>
+                    </properties>
                     <border type="none"/>
                     <children>
                       <component id="71004" class="javax.swing.JButton" default-binding="true">
@@ -961,6 +1255,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="1"/>
                         </properties>
                       </component>
@@ -971,6 +1269,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="2"/>
                         </properties>
                       </component>
@@ -981,6 +1283,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="3"/>
                         </properties>
                       </component>
@@ -991,6 +1297,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="4"/>
                         </properties>
                       </component>
@@ -1001,6 +1311,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="5"/>
                         </properties>
                       </component>
@@ -1011,6 +1325,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="6"/>
                         </properties>
                       </component>
@@ -1021,6 +1339,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="7"/>
                         </properties>
                       </component>
@@ -1031,6 +1353,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="8"/>
                         </properties>
                       </component>
@@ -1041,6 +1367,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="9"/>
                         </properties>
                       </component>
@@ -1051,6 +1381,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="10"/>
                         </properties>
                       </component>
@@ -1061,6 +1395,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="11"/>
                         </properties>
                       </component>
@@ -1071,6 +1409,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="12"/>
                         </properties>
                       </component>
@@ -1081,6 +1423,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="13"/>
                         </properties>
                       </component>
@@ -1091,6 +1437,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="14"/>
                         </properties>
                       </component>
@@ -1101,6 +1451,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="15"/>
                         </properties>
                       </component>
@@ -1111,6 +1465,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="16"/>
                         </properties>
                       </component>
@@ -1121,6 +1479,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="17"/>
                         </properties>
                       </component>
@@ -1131,6 +1493,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="18"/>
                         </properties>
                       </component>
@@ -1141,6 +1507,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="19"/>
                         </properties>
                       </component>
@@ -1151,6 +1521,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="20"/>
                         </properties>
                       </component>
@@ -1161,6 +1535,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="21"/>
                         </properties>
                       </component>
@@ -1171,6 +1549,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="22"/>
                         </properties>
                       </component>
@@ -1181,6 +1563,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="23"/>
                         </properties>
                       </component>
@@ -1191,6 +1577,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="24"/>
                         </properties>
                       </component>
@@ -1201,6 +1591,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="25"/>
                         </properties>
                       </component>
@@ -1211,6 +1605,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="26"/>
                         </properties>
                       </component>
@@ -1221,6 +1619,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="27"/>
                         </properties>
                       </component>
@@ -1231,6 +1633,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="28"/>
                         </properties>
                       </component>
@@ -1241,6 +1647,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="29"/>
                         </properties>
                       </component>
@@ -1251,6 +1661,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="30"/>
                         </properties>
                       </component>
@@ -1261,6 +1675,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="31"/>
                         </properties>
                       </component>
@@ -1271,6 +1689,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -1281,6 +1703,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -1291,6 +1717,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -1300,6 +1730,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Domingo"/>
                         </properties>
                       </component>
@@ -1309,6 +1740,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Lunes"/>
                         </properties>
                       </component>
@@ -1318,6 +1750,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Martes"/>
                         </properties>
                       </component>
@@ -1327,6 +1760,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Miercoles"/>
                         </properties>
                       </component>
@@ -1336,6 +1770,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Jueves"/>
                         </properties>
                       </component>
@@ -1345,6 +1780,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Viernes"/>
                         </properties>
                       </component>
@@ -1354,6 +1790,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Sabado"/>
                         </properties>
                       </component>
@@ -1361,12 +1798,15 @@
                   </grid>
                 </children>
               </grid>
-              <grid id="422b1" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="422b1" binding="Mayo" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <tabbedpane title="Mayo"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <background color="-15069147"/>
+                  <foreground color="-1"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <grid id="eadee" layout-manager="GridLayoutManager" row-count="6" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -1374,7 +1814,10 @@
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <background color="-15069147"/>
+                      <foreground color="-1"/>
+                    </properties>
                     <border type="none"/>
                     <children>
                       <component id="7be08" class="javax.swing.JButton" default-binding="true">
@@ -1384,6 +1827,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="1"/>
                         </properties>
                       </component>
@@ -1394,6 +1841,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="2"/>
                         </properties>
                       </component>
@@ -1404,6 +1855,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="3"/>
                         </properties>
                       </component>
@@ -1414,6 +1869,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="4"/>
                         </properties>
                       </component>
@@ -1424,6 +1883,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="5"/>
                         </properties>
                       </component>
@@ -1434,6 +1897,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="6"/>
                         </properties>
                       </component>
@@ -1444,6 +1911,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="7"/>
                         </properties>
                       </component>
@@ -1454,6 +1925,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="8"/>
                         </properties>
                       </component>
@@ -1464,6 +1939,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="9"/>
                         </properties>
                       </component>
@@ -1474,6 +1953,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="10"/>
                         </properties>
                       </component>
@@ -1484,6 +1967,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="11"/>
                         </properties>
                       </component>
@@ -1494,6 +1981,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="12"/>
                         </properties>
                       </component>
@@ -1504,6 +1995,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="13"/>
                         </properties>
                       </component>
@@ -1514,6 +2009,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="14"/>
                         </properties>
                       </component>
@@ -1524,6 +2023,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="15"/>
                         </properties>
                       </component>
@@ -1534,6 +2037,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="16"/>
                         </properties>
                       </component>
@@ -1544,6 +2051,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="17"/>
                         </properties>
                       </component>
@@ -1554,6 +2065,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="18"/>
                         </properties>
                       </component>
@@ -1564,6 +2079,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="19"/>
                         </properties>
                       </component>
@@ -1574,6 +2093,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="20"/>
                         </properties>
                       </component>
@@ -1584,6 +2107,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="21"/>
                         </properties>
                       </component>
@@ -1594,6 +2121,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="22"/>
                         </properties>
                       </component>
@@ -1604,6 +2135,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="23"/>
                         </properties>
                       </component>
@@ -1614,6 +2149,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="24"/>
                         </properties>
                       </component>
@@ -1624,6 +2163,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="25"/>
                         </properties>
                       </component>
@@ -1634,6 +2177,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="26"/>
                         </properties>
                       </component>
@@ -1644,6 +2191,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="27"/>
                         </properties>
                       </component>
@@ -1654,6 +2205,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="28"/>
                         </properties>
                       </component>
@@ -1664,6 +2219,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="29"/>
                         </properties>
                       </component>
@@ -1674,6 +2233,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="30"/>
                         </properties>
                       </component>
@@ -1684,6 +2247,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="31"/>
                         </properties>
                       </component>
@@ -1694,6 +2261,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -1704,6 +2275,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -1714,6 +2289,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -1723,6 +2302,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Domingo"/>
                         </properties>
                       </component>
@@ -1732,6 +2312,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Lunes"/>
                         </properties>
                       </component>
@@ -1741,6 +2322,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Martes"/>
                         </properties>
                       </component>
@@ -1750,6 +2332,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Miercoles"/>
                         </properties>
                       </component>
@@ -1759,6 +2342,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Jueves"/>
                         </properties>
                       </component>
@@ -1768,6 +2352,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Viernes"/>
                         </properties>
                       </component>
@@ -1777,6 +2362,7 @@
                         </constraints>
                         <properties>
                           <background color="-65535"/>
+                          <foreground color="-1"/>
                           <text value="Sabado"/>
                         </properties>
                       </component>
@@ -1784,12 +2370,15 @@
                   </grid>
                 </children>
               </grid>
-              <grid id="bec05" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="bec05" binding="Junio" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <tabbedpane title="Junio"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <background color="-15069147"/>
+                  <foreground color="-1"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <grid id="170c" layout-manager="GridLayoutManager" row-count="6" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -1797,7 +2386,9 @@
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <background color="-15069147"/>
+                    </properties>
                     <border type="none"/>
                     <children>
                       <component id="f4513" class="javax.swing.JButton" default-binding="true">
@@ -1807,6 +2398,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="1"/>
                         </properties>
                       </component>
@@ -1817,6 +2412,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="2"/>
                         </properties>
                       </component>
@@ -1827,6 +2426,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="3"/>
                         </properties>
                       </component>
@@ -1837,6 +2440,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="4"/>
                         </properties>
                       </component>
@@ -1847,6 +2454,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="5"/>
                         </properties>
                       </component>
@@ -1857,6 +2468,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="6"/>
                         </properties>
                       </component>
@@ -1867,6 +2482,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="7"/>
                         </properties>
                       </component>
@@ -1877,6 +2496,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="8"/>
                         </properties>
                       </component>
@@ -1887,6 +2510,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="9"/>
                         </properties>
                       </component>
@@ -1897,6 +2524,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="10"/>
                         </properties>
                       </component>
@@ -1907,6 +2538,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="11"/>
                         </properties>
                       </component>
@@ -1917,6 +2552,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="12"/>
                         </properties>
                       </component>
@@ -1927,6 +2566,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="13"/>
                         </properties>
                       </component>
@@ -1937,6 +2580,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="14"/>
                         </properties>
                       </component>
@@ -1947,6 +2594,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="15"/>
                         </properties>
                       </component>
@@ -1957,6 +2608,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="16"/>
                         </properties>
                       </component>
@@ -1967,6 +2622,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="17"/>
                         </properties>
                       </component>
@@ -1977,6 +2636,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="18"/>
                         </properties>
                       </component>
@@ -1987,6 +2650,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="19"/>
                         </properties>
                       </component>
@@ -1997,6 +2664,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="20"/>
                         </properties>
                       </component>
@@ -2007,6 +2678,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="21"/>
                         </properties>
                       </component>
@@ -2017,6 +2692,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="22"/>
                         </properties>
                       </component>
@@ -2027,6 +2706,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="23"/>
                         </properties>
                       </component>
@@ -2037,6 +2720,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="24"/>
                         </properties>
                       </component>
@@ -2047,6 +2734,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="25"/>
                         </properties>
                       </component>
@@ -2057,6 +2748,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="26"/>
                         </properties>
                       </component>
@@ -2067,6 +2762,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="27"/>
                         </properties>
                       </component>
@@ -2077,6 +2776,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="28"/>
                         </properties>
                       </component>
@@ -2087,6 +2790,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="29"/>
                         </properties>
                       </component>
@@ -2097,6 +2804,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="30"/>
                         </properties>
                       </component>
@@ -2107,6 +2818,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value="31"/>
                         </properties>
                       </component>
@@ -2117,6 +2832,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -2127,6 +2846,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -2137,6 +2860,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <borderPainted value="false"/>
+                          <contentAreaFilled value="false"/>
+                          <focusPainted value="false"/>
+                          <foreground color="-1"/>
                           <text value=""/>
                         </properties>
                       </component>
@@ -2230,6 +2957,52 @@
               </grid>
             </children>
           </tabbedpane>
+          <component id="cfb72" class="javax.swing.JButton" binding="homeButton">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-15069147"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <enabled value="true"/>
+              <focusPainted value="false"/>
+              <icon value="imgs/logo.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <grid id="be0a1" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-15069147"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="e2436" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="4" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="101" height="17"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <foreground color="-1"/>
+                  <text value="UserName"/>
+                </properties>
+              </component>
+              <component id="9fc11" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <icon value="imgs/ISO.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
         </children>
       </grid>
     </children>

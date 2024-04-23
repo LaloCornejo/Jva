@@ -10,7 +10,6 @@ public class Dashboard extends JFrame {
     private JButton calendarioButton;
     private JButton foroButton;
     private JButton leaderboardButton;
-    private JTextPane UserNameTextPane;
 
     public Dashboard() {
         setContentPane(Dashboard);

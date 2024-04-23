@@ -1,120 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Dashboard">
-  <grid id="27dc6" binding="Dashboard" layout-manager="GridLayoutManager" row-count="7" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="Dashboard" layout-manager="GridLayoutManager" row-count="9" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="739" height="617"/>
+      <xy x="20" y="20" width="977" height="684"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-15069147"/>
+      <foreground color="-1"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="37ad3" class="javax.swing.JButton" binding="miPerfilButton" default-binding="true">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="4" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <minimum-size width="-1" height="100"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="JetBrains Mono" size="18" style="1"/>
-          <margin top="30" left="30" bottom="30" right="30"/>
-          <text value="MiPerfil"/>
-        </properties>
-      </component>
-      <component id="148c7" class="javax.swing.JButton" binding="newsletterButton" default-binding="true">
-        <constraints>
-          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <minimum-size width="-1" height="100"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="JetBrains Mono" size="18" style="1"/>
-          <margin top="30" left="30" bottom="30" right="30"/>
-          <text value="Newsletter"/>
-        </properties>
-      </component>
-      <component id="beea1" class="javax.swing.JButton" binding="misClasesButton" default-binding="true">
-        <constraints>
-          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="4" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <minimum-size width="-1" height="100"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="JetBrains Mono" size="18" style="1"/>
-          <margin top="30" left="30" bottom="30" right="30"/>
-          <text value="MisClases"/>
-        </properties>
-      </component>
-      <component id="8c6c4" class="javax.swing.JButton" binding="calendarioButton" default-binding="true">
-        <constraints>
-          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <minimum-size width="-1" height="100"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="JetBrains Mono" size="18" style="1"/>
-          <margin top="30" left="30" bottom="30" right="30"/>
-          <text value="Calendario"/>
-        </properties>
-      </component>
-      <component id="ce114" class="javax.swing.JButton" binding="foroButton" default-binding="true">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="4" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <minimum-size width="-1" height="100"/>
           </grid>
         </constraints>
         <properties>
+          <background color="-12510895"/>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="true"/>
+          <focusPainted value="false"/>
           <font name="JetBrains Mono" size="18" style="1"/>
+          <foreground color="-1"/>
           <margin top="30" left="30" bottom="30" right="30"/>
-          <text value="Foro"/>
+          <text value="MiPerfil"/>
         </properties>
       </component>
-      <component id="d5abe" class="javax.swing.JButton" binding="leaderboardButton" default-binding="true">
+      <component id="148c7" class="javax.swing.JButton" binding="newsletterButton" default-binding="true">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <minimum-size width="-1" height="100"/>
           </grid>
         </constraints>
         <properties>
+          <background color="-12510895"/>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="true"/>
+          <focusPainted value="false"/>
           <font name="JetBrains Mono" size="18" style="1"/>
+          <foreground color="-1"/>
+          <margin top="30" left="30" bottom="30" right="30"/>
+          <text value="Newsletter"/>
+        </properties>
+      </component>
+      <component id="beea1" class="javax.swing.JButton" binding="misClasesButton" default-binding="true">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="4" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12510895"/>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="true"/>
+          <focusPainted value="false"/>
+          <font name="JetBrains Mono" size="18" style="1"/>
+          <foreground color="-1"/>
+          <margin top="30" left="30" bottom="30" right="30"/>
+          <text value="MisClases"/>
+        </properties>
+      </component>
+      <component id="8c6c4" class="javax.swing.JButton" binding="calendarioButton" default-binding="true">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12510895"/>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="true"/>
+          <focusPainted value="false"/>
+          <font name="JetBrains Mono" size="18" style="1"/>
+          <foreground color="-1"/>
+          <margin top="30" left="30" bottom="30" right="30"/>
+          <text value="Calendario"/>
+        </properties>
+      </component>
+      <component id="ce114" class="javax.swing.JButton" binding="foroButton" default-binding="true">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="4" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12510895"/>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="true"/>
+          <focusPainted value="false"/>
+          <font name="JetBrains Mono" size="18" style="1"/>
+          <foreground color="-1"/>
+          <margin top="30" left="30" bottom="30" right="30"/>
+          <text value="Foro"/>
+        </properties>
+      </component>
+      <component id="d5abe" class="javax.swing.JButton" binding="leaderboardButton" default-binding="true">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12510895"/>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="true"/>
+          <focusPainted value="false"/>
+          <font name="JetBrains Mono" size="18" style="1"/>
+          <foreground color="-1"/>
           <margin top="30" left="30" bottom="30" right="30"/>
           <text value="Leaderboard"/>
         </properties>
       </component>
-      <component id="e9d8b" class="javax.swing.JTextPane" binding="UserNameTextPane">
-        <constraints>
-          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="115"/>
-            <maximum-size width="-1" height="200"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="JetBrains Mono" size="24" style="1"/>
-          <margin top="100" left="50" bottom="100" right="50"/>
-          <text value="Hello, UserName"/>
-        </properties>
-      </component>
       <vspacer id="e1196">
         <constraints>
-          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="100" height="-1"/>
             <preferred-size width="100" height="-1"/>
             <maximum-size width="100" height="-1"/>
           </grid>
         </constraints>
       </vspacer>
-      <component id="442e0" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="192" height="17"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="User"/>
-        </properties>
-      </component>
       <hspacer id="ab59b">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="200" height="-1"/>
             <preferred-size width="200" height="-1"/>
             <maximum-size width="200" height="-1"/>
@@ -123,7 +133,7 @@
       </hspacer>
       <hspacer id="6d3d0">
         <constraints>
-          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="200" height="-1"/>
             <preferred-size width="200" height="-1"/>
             <maximum-size width="200" height="-1"/>
@@ -136,6 +146,72 @@
             <minimum-size width="-1" height="20"/>
             <preferred-size width="-1" height="20"/>
             <maximum-size width="-1" height="20"/>
+          </grid>
+        </constraints>
+      </vspacer>
+      <grid id="706c0" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-15069147"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="44bb5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="4" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="101" height="17"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-1"/>
+              <text value="UserName"/>
+            </properties>
+          </component>
+          <component id="955c5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="imgs/ISO.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="20f8e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="imgs/logo.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="c6162" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono" size="24" style="1"/>
+          <foreground color="-1"/>
+          <text value="Hello, {UserName}"/>
+        </properties>
+      </component>
+      <vspacer id="a1a33">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="50"/>
+            <maximum-size width="-1" height="50"/>
+          </grid>
+        </constraints>
+      </vspacer>
+      <vspacer id="887da">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="50"/>
           </grid>
         </constraints>
       </vspacer>

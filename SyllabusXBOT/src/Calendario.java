@@ -4,7 +4,7 @@ public class Calendario extends JFrame {
     private JPanel Calendario;
     private JButton homeButton;
     private JTextPane calendarioText;
-    private JTabbedPane tabbedPane2;
+    private JTabbedPane semesterCalendar;
     private JButton a1Button;
     private JButton a2Button;
     private JButton a3Button;
@@ -16,6 +16,11 @@ public class Calendario extends JFrame {
     private JButton a20Button;
     private JButton a25Button;
     private JButton a29Button;
+    private JPanel Febrero;
+    private JPanel Marzo;
+    private JPanel Abril;
+    private JPanel Mayo;
+    private JPanel Junio;
 
     public Calendario() {
         setContentPane(Calendario);
