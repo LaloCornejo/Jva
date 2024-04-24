@@ -1,6 +1,8 @@
 package SchoolPOO.ExamenParcial2;
 
-public class Fecha {
+import java.io.Serializable;
+
+public class Fecha implements Serializable {
   private int dia;
   private int mes;
   private int anio;
@@ -50,6 +52,18 @@ public class Fecha {
       }
     }
     return true;
+  }
+
+  public int getDia() {
+    return dia;
+  }
+
+  public int getMes() {
+    return mes;
+  }
+
+  public int getAnio() {
+    return anio;
   }
 
   public String getFecha() {

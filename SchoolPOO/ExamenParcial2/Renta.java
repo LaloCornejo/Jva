@@ -77,6 +77,7 @@ public class Renta implements Serializable {
     return "ID Renta: " + getIdRenta() + "\n" +
            "ID Artículo: " + getIdArticulo() + "\n" +
            "ID Subscriptor: " + getIdSubscriptor() + "\n" +
-           "Fecha de renta: " + getFechaRenta() + "\n";
+            "Fecha de renta: " + getFechaRenta() + "\n" +
+            "Fecha de vencimiento: " + getFechaVencimiento() + "\n";
   }
 }

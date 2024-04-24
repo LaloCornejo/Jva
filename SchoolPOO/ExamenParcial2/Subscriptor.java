@@ -1,5 +1,6 @@
 package SchoolPOO.ExamenParcial2;
 
+
 import java.io.Serializable;
 
 public class Subscriptor implements Serializable {
@@ -7,7 +8,7 @@ public class Subscriptor implements Serializable {
   private String nombre;
   private String tipo;
   private String telefono;
-  private Fecha fechaNacimiento;
+  private final Fecha fechaNacimiento;
   private String correoElectronico;
 
   public Subscriptor() {
@@ -19,13 +20,12 @@ public class Subscriptor implements Serializable {
     this.correoElectronico = "";
   }
 
-  public Subscriptor(String idSubscriptor, String nombre, String tipo, String telefono, int dia, int mes, int anio,
-      String correoElectronico) {
+  public Subscriptor(String idSubscriptor, String nombre, String tipo, String telefono, Fecha fechaNacimiento, String correoElectronico) {
     this.idSubscriptor = idSubscriptor;
     this.nombre = nombre;
     this.tipo = tipo;
     this.telefono = telefono;
-    this.fechaNacimiento = new Fecha(dia, mes, anio);
+    this.fechaNacimiento = fechaNacimiento;
     this.correoElectronico = correoElectronico;
   }
   
@@ -86,8 +86,7 @@ public class Subscriptor implements Serializable {
         "\nNombre: " + getNombre() +
         "\nTipo: " + getTipo() +
         "\nTeléfono: " + getTelefono() +
-        "\nFecha de Nacimiento: " + fechaNacimiento.getFecha() +
-         "\nCorreo Electrónico: " + getCorreoElectronico();
+        "\nFecha de Nacimiento: " + fechaNacimiento.getFecha() + "\nCorreo Electrónico: " + getCorreoElectronico();
   }
 
 }

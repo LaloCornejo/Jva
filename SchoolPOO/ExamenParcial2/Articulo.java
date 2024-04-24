@@ -77,12 +77,12 @@ public class Articulo implements Serializable {
   }
 
   public String getDatos() {
-    return "***** ARTICULO *****\n" +
+    return "***** ARTICULO *****" +
       "\nidArticulo: " + getIdArticulo() +
       "\nTitulo: " + getTitulo() +
       "\nProductor: " + getProductor() +
-      "\nAnio de Estreno: " + getAnioEstreno() +
-      "\nDuracion: " + getDuracion() +
-      "\nCosto: " + getCosto();
+      "\nAño de Estreno: " + getAnioEstreno() +
+      "\nDuracion: " + getDuracion() + " minutos" +
+      "\nCosto: $" + getCosto();
   }
 }
