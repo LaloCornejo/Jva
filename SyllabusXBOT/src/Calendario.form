@@ -3003,6 +3003,19 @@
               </component>
             </children>
           </grid>
+          <component id="5a29" class="javax.swing.JButton" binding="estadoDeCuentaButton" default-binding="true">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-12510895"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <font name="JetBrains Mono" size="16" style="1"/>
+              <foreground color="-1"/>
+              <text value="Estado de cuenta"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>

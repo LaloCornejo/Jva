@@ -22,6 +22,6 @@ public class Landing extends JFrame{
     }
 
     public static void main(String[] args) {
-        new Landing();
+        Landing landing = new Landing();
     }
 }

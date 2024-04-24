@@ -21,6 +21,7 @@ public class Calendario extends JFrame {
     private JPanel Abril;
     private JPanel Mayo;
     private JPanel Junio;
+    private JButton estadoDeCuentaButton;
 
     public Calendario() {
         setContentPane(Calendario);
@@ -33,6 +34,10 @@ public class Calendario extends JFrame {
             setVisible(false);
             new Dashboard();
             dispose();
+        });
+
+        estadoDeCuentaButton.addActionListener(e-> {
+            new EstadoDeCuenta();
         });
     }
 
