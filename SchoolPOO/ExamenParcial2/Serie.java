@@ -47,7 +47,7 @@ public class Serie extends Articulo{
   @Override
   public String getDatos() {
     return super.getDatos() +
-        "Categoria: " + getCategoria() +
+        "\nCategoria: " + getCategoria() +
         "\nTemporada: " + getTemporada() +
        "\nNo. Capitulos: " + getNoCapitulos() + "\n";
   }

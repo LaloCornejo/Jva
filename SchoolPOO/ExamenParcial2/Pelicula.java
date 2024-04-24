@@ -47,7 +47,7 @@ public class Pelicula extends Articulo {
   @Override
   public String getDatos() {
     return super.getDatos() +
-        "Genero: " + getGenero() +
+        "\nGenero: " + getGenero() +
         "\nDirector: " + getDirector() +
         "\nPais: " + getPais() + "\n";
   }

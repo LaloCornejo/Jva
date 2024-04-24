@@ -1,13 +1,15 @@
 package SchoolPOO.ExamenParcial2;
 
-public class Renta {
+import java.io.Serializable;
+
+public class Renta implements Serializable {
   private int idRenta;
   private int idArticulo;
   private String idSubscriptor;
   private Fecha fechaRenta;
   private Fecha fechaVencimiento;
 
-  public Renta(int idRenta, Articulo articulo, Subscriptor suscriptor, Fecha fechaRenta, Fecha fechaVencimiento) {
+  public Renta() {
     this.idRenta = 0;
     this.idArticulo = 0;
     this.idSubscriptor = null;
@@ -15,11 +17,12 @@ public class Renta {
     this.fechaVencimiento = new Fecha();
   }
 
-  public Renta(int idRenta, int idArticulo, String idSubscriptor, int dia, int mes, int anio) {
+  public Renta(int idRenta, int  articulo, String suscriptor, Fecha fechaRenta, Fecha fechaVencimiento) {
     this.idRenta = idRenta;
-    this.idArticulo = idArticulo;
-    this.idSubscriptor = idSubscriptor;
-    this.fechaRenta = new Fecha(dia, mes, anio);
+    this.idArticulo = articulo;
+    this.idSubscriptor = suscriptor;
+    this.fechaRenta = fechaRenta ;
+    this.fechaVencimiento = fechaVencimiento;
   }
 
   public void setIdRenta(int idRenta) {
@@ -74,7 +77,6 @@ public class Renta {
     return "ID Renta: " + getIdRenta() + "\n" +
            "ID Artículo: " + getIdArticulo() + "\n" +
            "ID Subscriptor: " + getIdSubscriptor() + "\n" +
-           "Fecha de renta: " + getFechaRenta() + "\n" +
-           "Fecha de vencimiento: " + getFechaVencimiento();
+           "Fecha de renta: " + getFechaRenta() + "\n";
   }
 }

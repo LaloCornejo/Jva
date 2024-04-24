@@ -146,15 +146,15 @@ public class Entretenimiento {
             ------ Entretenimiento ------
             1) Alta de una película
             2) Alta de una serie
-            3) Alta de un suscriptor
+            3) Alta de un subscriptor
             4) Alta de una renta
             5) Listar películas
             6) Listar series
-            7) Listar suscriptores
+            7) Listar subscriptores
             8) Listar rentas
             9) Ver detalle de una película
             10) Ver detalle de una serie
-            11) Ver detalle de un suscriptor
+            11) Ver detalle de un subscriptor
             12) Ver detalle de una renta
             13) Eliminar una película
             14) Eliminar una serie
@@ -176,6 +176,10 @@ public class Entretenimiento {
     do {
       try {
         idArticulo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del artículo: "));
+        if(buscarArticulo(articulos, idArticulo) != null){
+          JOptionPane.showMessageDialog(null, "El ID del artículo ya existe. Ingrese uno diferente.");
+          idArticulo = -1;
+        }
       } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
         idArticulo = -1;
@@ -269,6 +273,10 @@ public class Entretenimiento {
     do {
       try {
         idArticulo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del artículo: "));
+        if (buscarArticulo(articulos, idArticulo) != null){
+          JOptionPane.showMessageDialog(null, "El ID del artículo ya existe. Ingrese uno diferente.");
+          idArticulo = -1;
+        }
       } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
         idArticulo = -1;
@@ -365,6 +373,10 @@ public class Entretenimiento {
     do {
       try {
         idSubscriptor = JOptionPane.showInputDialog("Ingrese el ID del subscriptor: ");
+        if (existeSuscriptor(subscriptores, idSubscriptor)) {
+          JOptionPane.showMessageDialog(null, "El ID del subscriptor ya existe. Ingrese uno diferente.");
+          idSubscriptor = null;
+        }
       } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Error: Ingrese un valor válido");
         idSubscriptor = null;
@@ -436,12 +448,10 @@ public class Entretenimiento {
         idRenta = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID de la renta: "));
         if (existeRenta(rentas, idRenta)) {
           JOptionPane.showMessageDialog(null, "El ID de la renta ya existe. Ingrese uno diferente.");
-          continue;
         }
       } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
         idRenta = -1;
-        continue;
       }
     } while (idRenta == -1);
 
@@ -450,12 +460,10 @@ public class Entretenimiento {
         idArticulo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del artículo: "));
         if (!existeArticulo(articulos, idArticulo)) {
           JOptionPane.showMessageDialog(null, "El ID del artículo no existe. Ingrese uno válido.");
-          continue;
         }
       } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
         idArticulo = -1;
-        continue;
       }
     } while (idArticulo == -1);
 
@@ -464,59 +472,73 @@ public class Entretenimiento {
         idSuscriptor = JOptionPane.showInputDialog("Ingrese el ID del suscriptor: ");
         if (!existeSuscriptor(suscriptores, idSuscriptor)) {
           JOptionPane.showMessageDialog(null, "El ID del suscriptor no existe. Ingrese uno válido.");
-          continue;
         }
       } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Error: Ingrese un valor válido");
         idSuscriptor = null;
-        continue;
       }
     } while (idSuscriptor == null);
 
     fechaRenta = ingresarFecha("Ingrese la fecha de renta (dd/mm/aaaa): ");
     fechaVencimiento = ingresarFecha("Ingrese la fecha de vencimiento (dd/mm/aaaa): ");
 
-    Articulo articulo = buscarArticulo(articulos, idArticulo);
-    Subscriptor suscriptor = buscarSubscriptor(suscriptores, idSuscriptor);
+//    Articulo articulo = buscarArticulo(articulos, idArticulo);
+//    Subscriptor suscriptor = buscarSubscriptor(suscriptores, idSuscriptor);
 
-    Renta renta = new Renta(idRenta, articulo, suscriptor, fechaRenta, fechaVencimiento);
+    Renta renta = new Renta(idRenta, idArticulo, idSuscriptor, fechaRenta, fechaVencimiento);
     rentas.add(renta);
 
     JOptionPane.showMessageDialog(null, "Renta realizada con éxito");
   }
 
   private static void listarPeliculas(ArrayList<Articulo> articulos) {
-    String listaPeliculas = "";
+    String listaPeliculas = """
+                               LISTA DE PELÍCULAS
+            id.Articulo \t Titulo \t Duracion \t Genero \t Director \n
+            ------------------------------------------------------------------------
+            """;
     for (Articulo articulo : articulos) {
       if (articulo instanceof Pelicula) {
-        listaPeliculas += articulo.getDatos() + "\n";
+        listaPeliculas += articulo.getIdArticulo()  + "\t" + articulo.getTitulo()  + "\t" + articulo.getDuracion()  + "\t" + ((Pelicula) articulo).getGenero()  + "\t" + ((Pelicula) articulo).getDirector()  + "\n";
       }
     }
     JOptionPane.showMessageDialog(null, listaPeliculas);
   }
 
   private static void listarSeries(ArrayList<Articulo> articulos) {
-    String listaSeries = "";
+    String listaSeries = """
+                                 LISTA DE SERIES
+            id.Articulo \t Titulo \t Año \t Categoria \t Temporada\n
+            ----------------------------------------------------------------------------
+            """;
     for (Articulo articulo : articulos) {
       if (articulo instanceof Serie) {
-        listaSeries += articulo.getDatos() + "\n";
+        listaSeries += articulo.getIdArticulo() + "\t" + articulo.getTitulo()  + "\t" + articulo.getAnioEstreno()  + "\t" + ((Serie) articulo).getCategoria()  + "\t" + ((Serie) articulo).getTemporada() + "\n";
       }
     }
     JOptionPane.showMessageDialog(null, listaSeries);
   }
 
   private static void listarSubscriptores(ArrayList<Subscriptor> subscriptores) {
-    String listaSubscriptores = "";
+    String listaSubscriptores = """
+                           LISTADO DE CLIENTES
+            id.Cliente \t Nombre \t Tipo \t Fecha de Nacimiento
+            ------------------------------------------------------------------------
+            """;
     for (Subscriptor subscriptor : subscriptores) {
-      listaSubscriptores += subscriptor.getDatos() + "\n";
+      listaSubscriptores += subscriptor.getIdSubscriptor() + "\t" + subscriptor.getNombre() + "\t" + subscriptor.getTipo() + "\t" + subscriptor.getFechaNacimiento() + "\n";
     }
     JOptionPane.showMessageDialog(null, listaSubscriptores);
   }
 
   private static void listarRentas(ArrayList<Renta> rentas) {
-    String listaRentas = "";
+    String listaRentas = """
+                           LISTADO DE RENTAS
+            id.Renta \t id.Articulo \t id.Cliente \t Fecha de Renta
+            ---------------------------------------------------------
+            """;
     for (Renta renta : rentas) {
-      listaRentas += renta.getDatos() + "\n";
+      listaRentas += renta.getIdRenta() + "\t" + renta.getIdArticulo() + "\t" + renta.getIdSubscriptor() + "\t" + renta.getFechaRenta() + "\n";
     }
     JOptionPane.showMessageDialog(null, listaRentas);
   }

@@ -1,6 +1,8 @@
 package SchoolPOO.ExamenParcial2;
 
-public class Articulo  {
+import java.io.Serializable;
+
+public class Articulo implements Serializable {
   private int idArticulo;
   private String titulo;
   private String productor;

@@ -1,6 +1,8 @@
 package SchoolPOO.ExamenParcial2;
 
-public class Subscriptor {
+import java.io.Serializable;
+
+public class Subscriptor implements Serializable {
   private String idSubscriptor;
   private String nombre;
   private String tipo;
