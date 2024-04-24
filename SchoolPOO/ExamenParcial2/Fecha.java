@@ -24,10 +24,7 @@ public class Fecha {
   }
 
   public boolean esBisiesto() {
-    if (this.anio % 4 == 0 && this.anio % 100 != 0 || this.anio % 400 == 0) {
-      return true;
-    }
-    return false;
+      return this.anio % 4 == 0 && this.anio % 100 != 0 || this.anio % 400 == 0;
   }
 
   public boolean fechaCorrecta() {
@@ -47,13 +44,9 @@ public class Fecha {
     }
     if (this.mes == 2) {
       if (esBisiesto()) {
-        if (this.dia > 29) {
-          return false;
-        }
+          return this.dia <= 29;
       } else {
-        if (this.dia > 28) {
-          return false;
-        }
+          return this.dia <= 28;
       }
     }
     return true;

@@ -3,24 +3,23 @@ package SchoolPOO.ExamenParcial2;
 public class Renta {
   private int idRenta;
   private int idArticulo;
-  private int idSubscriptor;
+  private String idSubscriptor;
   private Fecha fechaRenta;
   private Fecha fechaVencimiento;
 
-  public Renta() {
+  public Renta(int idRenta, Articulo articulo, Subscriptor suscriptor, Fecha fechaRenta, Fecha fechaVencimiento) {
     this.idRenta = 0;
     this.idArticulo = 0;
-    this.idSubscriptor = 0;
-    this.fechaRenta = "";
-    this.fechaVencimiento = "";
+    this.idSubscriptor = null;
+    this.fechaRenta = new Fecha();
+    this.fechaVencimiento = new Fecha();
   }
 
-  public Renta(int idRenta, int idArticulo, int idSubscriptor, String fechaRenta, String fechaVencimiento) {
+  public Renta(int idRenta, int idArticulo, String idSubscriptor, int dia, int mes, int anio) {
     this.idRenta = idRenta;
     this.idArticulo = idArticulo;
     this.idSubscriptor = idSubscriptor;
-    this.fechaRenta = fechaRenta;
-    this.fechaVencimiento = fechaVencimiento;
+    this.fechaRenta = new Fecha(dia, mes, anio);
   }
 
   public void setIdRenta(int idRenta) {
@@ -31,7 +30,7 @@ public class Renta {
     this.idArticulo = idArticulo;
   }
 
-  public void setIdSubscriptor(int idSubscriptor) {
+  public void setIdSubscriptor(String idSubscriptor) {
     this.idSubscriptor = idSubscriptor;
   }
 
@@ -59,7 +58,7 @@ public class Renta {
     return idArticulo;
   }
 
-  public int getIdSubscriptor() {
+  public String getIdSubscriptor() {
     return idSubscriptor;
   }
 
@@ -75,7 +74,7 @@ public class Renta {
     return "ID Renta: " + getIdRenta() + "\n" +
            "ID Artículo: " + getIdArticulo() + "\n" +
            "ID Subscriptor: " + getIdSubscriptor() + "\n" +
-           "Fecha de renta: " + fechaRenta.getFecha() + "\n" +
-           "Fecha de vencimiento: " + fechaVencimiento.getFecha();
+           "Fecha de renta: " + getFechaRenta() + "\n" +
+           "Fecha de vencimiento: " + getFechaVencimiento();
   }
 }

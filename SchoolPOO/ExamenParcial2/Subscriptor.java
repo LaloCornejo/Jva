@@ -13,17 +13,17 @@ public class Subscriptor {
     this.nombre = "";
     this.tipo = "";
     this.telefono = "";
-    this.fechaNacimiento = "";
+    this.fechaNacimiento = new Fecha();
     this.correoElectronico = "";
   }
 
-  public Subscriptor(String idSubscriptor, String nombre, String tipo, String telefono, String fechaNacimiento,
+  public Subscriptor(String idSubscriptor, String nombre, String tipo, String telefono, int dia, int mes, int anio,
       String correoElectronico) {
     this.idSubscriptor = idSubscriptor;
     this.nombre = nombre;
     this.tipo = tipo;
     this.telefono = telefono;
-    this.fechaNacimiento = fechaNacimiento;
+    this.fechaNacimiento = new Fecha(dia, mes, anio);
     this.correoElectronico = correoElectronico;
   }
   
@@ -82,7 +82,7 @@ public class Subscriptor {
   public String getDatos() {
     return "ID Subscriptor: " + getIdSubscriptor() +
         "\nNombre: " + getNombre() +
-        "\nTipo: " + getTipo(0) +
+        "\nTipo: " + getTipo() +
         "\nTeléfono: " + getTelefono() +
         "\nFecha de Nacimiento: " + fechaNacimiento.getFecha() +
          "\nCorreo Electrónico: " + getCorreoElectronico();

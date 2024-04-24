@@ -1,52 +1,34 @@
 package SchoolPOO.ExamenParcial2;
 
+import javax.swing.*;
+import java.io.*;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 
 public class Entretenimiento {
   public static void main(String[] args) {
 
-    ArrayList<Articulo> articulosLista = new ArrayList<Articulo>();
-    ArrayList<Suscriptor> suscriptoresLista = new ArrayList<Subscriptor>();
-    ArrayList<Renta> rentasLista = new ArrayList<Renta>();
+    ArrayList<Articulo> articulosLista = new ArrayList<>();
+    ArrayList<Subscriptor> suscriptoresLista = new ArrayList<>();
+    ArrayList<Renta> rentasLista = new ArrayList<>();
 
     int op;
 
-    String menu = "------ Entretenimiento ------\n" +
-    "1) Alta de una película\n" +
-    "2) Alta de una serie\n" +
-    "3) Alta de un suscriptor\n" +
-    "4) Alta de una renta\n" +
-    "5) Listar películas\n" +
-    "6) Listar series\n" +
-    "7) Listar suscriptores\n" +
-    "8) Listar rentas\n" +
-    "9) Ver detalle de una película\n" +
-    "10) Ver detalle de una serie\n" +
-    "11) Ver detalle de un suscriptor\n" +
-    "12) Ver detalle de una renta\n" +
-    "13) Eliminar una película\n" +
-    "14) Eliminar una serie\n" +
-    "15) Eliminar un suscriptor\n" +
-    "16) Eliminar una renta\n" +
-    "17) Salir\n" +
-    "Ingrese una opción:";
+    cargarDatos(articulosLista, suscriptoresLista, rentasLista);
 
-    // JOptionPane.showMessageDialog(null, menu);
     do {
       op = mostrarMenu();
       switch (op) {
         case 1:
-          agregarPeliciula(articulosLista);
+          altaPelicula(articulosLista);
           break;
         case 2:
-          agregarSerie(articulosLista);
+          altaSerie(articulosLista);
           break;
         case 3:
-          agregarSubscriptor(subscriptoresLista);
+          altaSubscriptor(suscriptoresLista);
           break;
         case 4:
-          agregarRenta(rentasLista, articulosLista, subscriptoresLista);
+          altaRenta(rentasLista, articulosLista, suscriptoresLista);
           break;
         case 5:
           listarPeliculas(articulosLista);
@@ -55,7 +37,7 @@ public class Entretenimiento {
           listarSeries(articulosLista);
           break;
         case 7:
-          listarSubscriptores(subscriptoresLista);
+          listarSubscriptores(suscriptoresLista);
           break;
         case 8:
           listarRentas(rentasLista);
@@ -67,7 +49,7 @@ public class Entretenimiento {
           verDetalleSerie(articulosLista);
           break;
         case 11:
-          verDetalleSubscriptor(subscriptoresLista);
+          verDetalleSubscriptor(suscriptoresLista);
           break;
         case 12:
           verDetalleRenta(rentasLista);
@@ -79,12 +61,13 @@ public class Entretenimiento {
           eliminarSerie(articulosLista);
           break;
         case 15:
-          eliminarSubscriptor(subscriptoresLista);
+          eliminarSubscriptor(suscriptoresLista);
           break;
         case 16:
           eliminarRenta(rentasLista);
           break;
         case 17:
+          guardarDatos(articulosLista, suscriptoresLista, rentasLista);
           JOptionPane.showMessageDialog(null, "Programa Creado por: LÆLÖ\n Espero pase la rubrica\n Bye :D");
           break;
         default:
@@ -94,7 +77,90 @@ public class Entretenimiento {
     } while (op != 17);
   }
 
-  private int mostrarMenu() {
+  private static void cargarDatos(ArrayList<Articulo> articulosLista, ArrayList<Subscriptor> suscriptoresLista, ArrayList<Renta> rentasLista) {
+    try {
+      FileInputStream fileArticulos = new FileInputStream("articulos.dat");
+      ObjectInputStream inputArticulos = new ObjectInputStream(fileArticulos);
+      articulosLista = (ArrayList<Articulo>) inputArticulos.readObject();
+      inputArticulos.close();
+      fileArticulos.close();
+    } catch (IOException | ClassNotFoundException e) {
+      System.out.println("Error al cargar datos de artículos: " + e.getMessage());
+    }
+
+    try {
+      FileInputStream fileSuscriptores = new FileInputStream("suscriptores.dat");
+      ObjectInputStream inputSuscriptores = new ObjectInputStream(fileSuscriptores);
+      suscriptoresLista = (ArrayList<Subscriptor>) inputSuscriptores.readObject();
+      inputSuscriptores.close();
+      fileSuscriptores.close();
+    } catch (IOException | ClassNotFoundException e) {
+      System.out.println("Error al cargar datos de suscriptores: " + e.getMessage());
+    }
+
+    try {
+      FileInputStream fileRentas = new FileInputStream("rentas.dat");
+      ObjectInputStream inputRentas = new ObjectInputStream(fileRentas);
+      rentasLista = (ArrayList<Renta>) inputRentas.readObject();
+      inputRentas.close();
+      fileRentas.close();
+    } catch (IOException | ClassNotFoundException e) {
+      System.out.println("Error al cargar datos de rentas: " + e.getMessage());
+    }
+  }
+
+  private static void guardarDatos(ArrayList<Articulo> articulosLista, ArrayList<Subscriptor> suscriptoresLista, ArrayList<Renta> rentasLista) {
+    try {
+      FileOutputStream fileArticulos = new FileOutputStream("articulos.dat");
+      ObjectOutputStream outputArticulos = new ObjectOutputStream(fileArticulos);
+      outputArticulos.writeObject(articulosLista);
+      outputArticulos.close();
+      fileArticulos.close();
+    } catch (IOException e) {
+      System.out.println("Error al guardar datos de artículos: " + e.getMessage());
+    }
+
+    try {
+      FileOutputStream fileSuscriptores = new FileOutputStream("suscriptores.dat");
+      ObjectOutputStream outputSuscriptores = new ObjectOutputStream(fileSuscriptores);
+      outputSuscriptores.writeObject(suscriptoresLista);
+      outputSuscriptores.close();
+      fileSuscriptores.close();
+    } catch (IOException e) {
+      System.out.println("Error al guardar datos de suscriptores: " + e.getMessage());
+    }
+
+    try {
+      FileOutputStream fileRentas = new FileOutputStream("rentas.dat");
+      ObjectOutputStream outputRentas = new ObjectOutputStream(fileRentas);
+      outputRentas.writeObject(rentasLista);
+      outputRentas.close();
+      fileRentas.close();
+    } catch (IOException e) {
+      System.out.println("Error al guardar datos de rentas: " + e.getMessage());
+    }
+  }
+
+  private static int mostrarMenu() {
+    String menu = """
+            ------ Entretenimiento ------
+            1) Alta de una película
+            2) Alta de una serie
+            3) Alta de un suscriptor
+            4) Alta de una renta
+            5) Listar películas
+            6) Listar series
+            7) Listar suscriptores
+            8) Listar rentas
+            9) Ver detalle de una película
+            10) Ver detalle de una serie
+            11) Ver detalle de un suscriptor
+            12) Ver detalle de una renta
+            13) Eliminar una película
+            14) Eliminar una serie
+            15) Eliminar un suscriptor
+            16) Eliminar una renta
+            17) Salir""";
     try {
       return Integer.parseInt(JOptionPane.showInputDialog(null, menu + "\nIngrese una opción: "));
     } catch (NumberFormatException e) {
@@ -103,7 +169,7 @@ public class Entretenimiento {
     }
   }
 
-  private void altaPelicula(ArrayList<Articulo> articulos) {
+  private static void altaPelicula(ArrayList<Articulo> articulos) {
     int idArticulo, anio, duracion;
     String titulo, productor, genero, director, pais;
     double costo;
@@ -137,6 +203,10 @@ public class Entretenimiento {
     do {
       try {
         anio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el año de estreno de la película: "));
+        if(anio < 1950 || anio > 2024){
+          JOptionPane.showMessageDialog(null, "Error: Ingrese un año válido");
+          anio = -1;
+        }
       } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
         anio = -1;
@@ -192,7 +262,7 @@ public class Entretenimiento {
     articulos.add(pelicula);
   }
 
-  private void altaSerie(ArrayList<Articulo> articulos) {
+  private static void altaSerie(ArrayList<Articulo> articulos) {
     int idArticulo, anio, duracion, temporada, noCapitulos;
     String titulo, productor, categoria;
     double costo;
@@ -226,6 +296,10 @@ public class Entretenimiento {
     do {
       try {
         anio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el año de estreno de la serie: "));
+        if(anio < 1950 || anio > 2024){
+          JOptionPane.showMessageDialog(null, "Error: Ingrese un año válido");
+          anio = -1;
+        }
       } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
         anio = -1;
@@ -281,8 +355,11 @@ public class Entretenimiento {
     articulos.add(serie);
   }
 
-  private void altaSubscriptor(ArrayList<Subscriptor> subscriptores) {
+  private static void altaSubscriptor(ArrayList<Subscriptor> subscriptores) {
     String idSubscriptor, nombre, tipo, telefono, correoElectronico;
+    int dia = 0;
+    int mes = 0;
+    int anio = 0;
     Fecha fechaNacimiento = new Fecha();
 
     do {
@@ -332,9 +409,9 @@ public class Entretenimiento {
 
     do {
       try {
-        int dia = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el día de nacimiento del subscriptor: "));
-        int mes = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el mes de nacimiento del subscriptor: "));
-        int anio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el año de nacimiento del subscriptor: "));
+        dia = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el día de nacimiento del subscriptor: "));
+        mes = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el mes de nacimiento del subscriptor: "));
+        anio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el año de nacimiento del subscriptor: "));
         if (fechaNacimiento.fechaCorrecta()) {
           fechaNacimiento.setFecha(dia, mes, anio);
         }
@@ -343,88 +420,72 @@ public class Entretenimiento {
       }
     } while (!fechaNacimiento.fechaCorrecta());
 
-    Subscriptor subscriptor = new Subscriptor(idSubscriptor, nombre, direccion, telefono);
+    Subscriptor subscriptor = new Subscriptor(idSubscriptor, nombre, tipo, telefono, dia, mes, anio, correoElectronico);
     subscriptores.add(subscriptor);
   }
 
-  private void altaRenta(ArrayList<Renta> rentas, ArrayList<Articulo> articulos,
-      ArrayList<Subscriptor> subscriptores) {
-    int idRenta, idArticulo, idSubscriptor;
-    Fecha fechaRenta = new Fecha();
-    Fecha fechaVencimiento = new Fecha();
+  private static void altaRenta(ArrayList<Renta> rentas, ArrayList<Articulo> articulos, ArrayList<Subscriptor> suscriptores) {
+    int idRenta;
+    int idArticulo;
+    String idSuscriptor;
+    Fecha fechaRenta;
+    Fecha fechaVencimiento;
 
     do {
       try {
         idRenta = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID de la renta: "));
+        if (existeRenta(rentas, idRenta)) {
+          JOptionPane.showMessageDialog(null, "El ID de la renta ya existe. Ingrese uno diferente.");
+          continue;
+        }
       } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
         idRenta = -1;
+        continue;
       }
     } while (idRenta == -1);
 
     do {
       try {
         idArticulo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del artículo: "));
+        if (!existeArticulo(articulos, idArticulo)) {
+          JOptionPane.showMessageDialog(null, "El ID del artículo no existe. Ingrese uno válido.");
+          continue;
+        }
       } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
         idArticulo = -1;
+        continue;
       }
     } while (idArticulo == -1);
 
     do {
       try {
-        idSubscriptor = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del subscriptor: "));
-      } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
-        idSubscriptor = -1;
-      }
-    } while (idSubscriptor == -1);
-
-    do {
-      try {
-        int dia = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el día de renta: "));
-        int mes = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el mes de renta: "));
-        int anio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el año de renta: "));
-        if (fechaRenta.fechaCorrecta()) {
-          fechaRenta.setFecha(dia, mes, anio);
+        idSuscriptor = JOptionPane.showInputDialog("Ingrese el ID del suscriptor: ");
+        if (!existeSuscriptor(suscriptores, idSuscriptor)) {
+          JOptionPane.showMessageDialog(null, "El ID del suscriptor no existe. Ingrese uno válido.");
+          continue;
         }
       } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
+        JOptionPane.showMessageDialog(null, "Error: Ingrese un valor válido");
+        idSuscriptor = null;
+        continue;
       }
-    } while (!fechaRenta.fechaCorrecta());
+    } while (idSuscriptor == null);
 
-    do {
-      try {
-        int dia = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el día de vencimiento: "));
-        int mes = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el mes de vencimiento: "));
-        int anio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el año de vencimiento: "));
-        if (fechaVencimiento.fechaCorrecta()) {
-          fechaVencimiento.setFecha(dia, mes, anio);
-        }
-      } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido");
-      }
-    } while (!fechaVencimiento.fechaCorrecta());
+    fechaRenta = ingresarFecha("Ingrese la fecha de renta (dd/mm/aaaa): ");
+    fechaVencimiento = ingresarFecha("Ingrese la fecha de vencimiento (dd/mm/aaaa): ");
 
-    Renta renta = new Renta(idRenta, idArticulo, idSubscriptor, fechaRenta, fechaVencimiento);
+    Articulo articulo = buscarArticulo(articulos, idArticulo);
+    Subscriptor suscriptor = buscarSubscriptor(suscriptores, idSuscriptor);
+
+    Renta renta = new Renta(idRenta, articulo, suscriptor, fechaRenta, fechaVencimiento);
     rentas.add(renta);
-
-    for (Articulo articulo : articulos) {
-      if (articulo.getIdArticulo() == idArticulo) {
-        articulo.setRentado(true);
-      }
-    }
-
-    for (Subscriptor subscriptor : subscriptores) {
-      if (subscriptor.getIdSubscriptor() == idSubscriptor) {
-        subscriptor.setRentado(true);
-      }
-    }
 
     JOptionPane.showMessageDialog(null, "Renta realizada con éxito");
   }
 
-  private void listarPeliculas(ArrayList<Articulo> articulos) {
+  private static void listarPeliculas(ArrayList<Articulo> articulos) {
     String listaPeliculas = "";
     for (Articulo articulo : articulos) {
       if (articulo instanceof Pelicula) {
@@ -434,7 +495,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, listaPeliculas);
   }
 
-  private void listarSeries(ArrayList<Articulo> articulos) {
+  private static void listarSeries(ArrayList<Articulo> articulos) {
     String listaSeries = "";
     for (Articulo articulo : articulos) {
       if (articulo instanceof Serie) {
@@ -444,7 +505,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, listaSeries);
   }
 
-  private void listarSubscriptores(ArrayList<Subscriptor> subscriptores) {
+  private static void listarSubscriptores(ArrayList<Subscriptor> subscriptores) {
     String listaSubscriptores = "";
     for (Subscriptor subscriptor : subscriptores) {
       listaSubscriptores += subscriptor.getDatos() + "\n";
@@ -452,7 +513,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, listaSubscriptores);
   }
 
-  private void listarRentas(ArrayList<Renta> rentas) {
+  private static void listarRentas(ArrayList<Renta> rentas) {
     String listaRentas = "";
     for (Renta renta : rentas) {
       listaRentas += renta.getDatos() + "\n";
@@ -460,7 +521,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, listaRentas);
   }
 
-  private void verDetallePelicula(ArrayList<Articulo> articulos) {
+  private static void verDetallePelicula(ArrayList<Articulo> articulos) {
     int idArticulo;
     do {
       try {
@@ -481,7 +542,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, "No se encontró la película con el ID: " + idArticulo);
   }
 
-  private void verDetalleSerie(ArrayList<Articulo> articulos) {
+  private static void verDetalleSerie(ArrayList<Articulo> articulos) {
     int idArticulo;
     do {
       try {
@@ -502,7 +563,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, "No se encontró la serie con el ID: " + idArticulo);
   }
 
-  private void verDetalleSubscriptor(ArrayList<Subscriptor> subscriptores) {
+  private static void verDetalleSubscriptor(ArrayList<Subscriptor> subscriptores) {
     String idSubscriptor;
     do {
       try {
@@ -523,7 +584,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, "No se encontró el subscriptor con el ID: " + idSubscriptor);
   }
 
-  private void verDetalleRenta(ArrayList<Renta> rentas) {
+  private static void verDetalleRenta(ArrayList<Renta> rentas) {
     int idRenta;
     do {
       try {
@@ -544,7 +605,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, "No se encontró la renta con el ID: " + idRenta);
   }
 
-  private void eliminarPelicula(ArrayList<Articulo> articulos) {
+  private static void eliminarPelicula(ArrayList<Articulo> articulos) {
     int idArticulo;
     do {
       try {
@@ -566,7 +627,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, "No se encontró la película con el ID: " + idArticulo);
   }
 
-  private void eliminarSeries(ArrayList<Articulo> articulos) {
+  private static void eliminarSerie(ArrayList<Articulo> articulos) {
     int idArticulo;
     do {
       try {
@@ -588,7 +649,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, "No se encontró la serie con el ID: " + idArticulo);
   }
 
-  private void eliminarSubscriptor(ArrayList<Subscriptor> subscriptores) {
+  private static void eliminarSubscriptor(ArrayList<Subscriptor> subscriptores) {
     String idSubscriptor;
     do {
       try {
@@ -610,7 +671,7 @@ public class Entretenimiento {
     JOptionPane.showMessageDialog(null, "No se encontró el subscriptor con el ID: " + idSubscriptor);
   }
 
-  private void eliminarRenta(ArrayList<Renta> rentas) {
+  private static void eliminarRenta(ArrayList<Renta> rentas) {
     int idRenta;
     do {
       try {
@@ -630,5 +691,73 @@ public class Entretenimiento {
     }
 
     JOptionPane.showMessageDialog(null, "No se encontró la renta con el ID: " + idRenta);
+  }
+
+  private static boolean existeRenta(ArrayList<Renta> rentas, int idRenta) {
+    for (Renta renta : rentas) {
+      if (renta.getIdRenta() == idRenta) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private static boolean existeArticulo(ArrayList<Articulo> articulos, int idArticulo) {
+    for (Articulo articulo : articulos) {
+      if (articulo.getIdArticulo() == idArticulo) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private static boolean existeSuscriptor(ArrayList<Subscriptor> suscriptores, String idSuscriptor) {
+    for (Subscriptor suscriptor : suscriptores) {
+      if (suscriptor.getIdSubscriptor().equals(idSuscriptor)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private static Fecha ingresarFecha(String mensaje) {
+    String input = JOptionPane.showInputDialog(null, mensaje);
+    if (input == null || input.isEmpty()) {
+      return null;
+    }
+
+    String[] partes = input.split("/");
+    if (partes.length != 3) {
+      JOptionPane.showMessageDialog(null, "Formato de fecha inválido");
+      return null;
+    }
+
+    try {
+      int dia = Integer.parseInt(partes[0]);
+      int mes = Integer.parseInt(partes[1]);
+      int anio = Integer.parseInt(partes[2]);
+      return new Fecha(dia, mes, anio);
+    } catch (NumberFormatException e) {
+      JOptionPane.showMessageDialog(null, "Formato de fecha inválido");
+      return null;
+    }
+  }
+
+  private static Articulo buscarArticulo(ArrayList<Articulo> articulos, int idArticulo) {
+    for (Articulo articulo : articulos) {
+      if (articulo.getIdArticulo() == idArticulo) {
+        return articulo;
+      }
+    }
+    return null;
+  }
+
+  private static Subscriptor buscarSubscriptor(ArrayList<Subscriptor> suscriptores, String idSuscriptor) {
+    for (Subscriptor suscriptor : suscriptores) {
+      if (suscriptor.getIdSubscriptor().equals(idSuscriptor)) {
+        return suscriptor;
+      }
+    }
+    return null;
   }
 }
