@@ -86,7 +86,7 @@ public class Entretenimiento {
 
   private static void cargarDatos(ArrayList<Articulo> articulosLista, ArrayList<Subscriptor> suscriptoresLista, ArrayList<Renta> rentasLista) {
     try {
-      FileInputStream fileArticulos = new FileInputStream("articulos.dat");
+      FileInputStream fileArticulos = new FileInputStream("articulos.txt");
       ObjectInputStream inputArticulos = new ObjectInputStream(fileArticulos);
       articulosLista.clear();
       articulosLista.addAll((ArrayList<Articulo>) inputArticulos.readObject());
@@ -97,7 +97,7 @@ public class Entretenimiento {
     }
 
     try {
-      FileInputStream fileSuscriptores = new FileInputStream("suscriptores.dat");
+      FileInputStream fileSuscriptores = new FileInputStream("suscriptores.txt");
       ObjectInputStream inputSuscriptores = new ObjectInputStream(fileSuscriptores);
       suscriptoresLista.clear();
       suscriptoresLista.addAll((ArrayList<Subscriptor>) inputSuscriptores.readObject());
@@ -108,7 +108,7 @@ public class Entretenimiento {
     }
 
     try {
-      FileInputStream fileRentas = new FileInputStream("rentas.dat");
+      FileInputStream fileRentas = new FileInputStream("rentas.txt");
       ObjectInputStream inputRentas = new ObjectInputStream(fileRentas);
       rentasLista.clear();
       rentasLista.addAll((ArrayList<Renta>) inputRentas.readObject());
@@ -121,7 +121,7 @@ public class Entretenimiento {
 
   private static void guardarDatos(ArrayList<Articulo> articulosLista, ArrayList<Subscriptor> suscriptoresLista, ArrayList<Renta> rentasLista) {
     try {
-      FileOutputStream fileArticulos = new FileOutputStream("articulos.dat");
+      FileOutputStream fileArticulos = new FileOutputStream("articulos.txt");
       ObjectOutputStream outputArticulos = new ObjectOutputStream(fileArticulos);
       outputArticulos.writeObject(articulosLista);
       outputArticulos.close();
@@ -131,7 +131,7 @@ public class Entretenimiento {
     }
 
     try {
-      FileOutputStream fileSuscriptores = new FileOutputStream("suscriptores.dat");
+      FileOutputStream fileSuscriptores = new FileOutputStream("suscriptores.txt");
       ObjectOutputStream outputSuscriptores = new ObjectOutputStream(fileSuscriptores);
       outputSuscriptores.writeObject(suscriptoresLista);
       outputSuscriptores.close();
@@ -141,7 +141,7 @@ public class Entretenimiento {
     }
 
     try {
-      FileOutputStream fileRentas = new FileOutputStream("rentas.dat");
+      FileOutputStream fileRentas = new FileOutputStream("rentas.txt");
       ObjectOutputStream outputRentas = new ObjectOutputStream(fileRentas);
       outputRentas.writeObject(rentasLista);
       outputRentas.close();
