@@ -22,6 +22,7 @@ public class Calendario extends JFrame {
     private JPanel Mayo;
     private JPanel Junio;
     private JButton estadoDeCuentaButton;
+    private JTextField searchField;
 
     public Calendario() {
         setContentPane(Calendario);

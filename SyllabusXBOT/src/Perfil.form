@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Perfil">
   <scrollpane id="30a1c" binding="Scroll">
     <constraints>
-      <xy x="20" y="20" width="1044" height="1461"/>
+      <xy x="20" y="20" width="1044" height="1739"/>
     </constraints>
     <properties>
       <preferredSize width="-1" height="-1"/>
@@ -10,7 +10,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <grid id="27dc6" binding="pefilGUI" layout-manager="GridLayoutManager" row-count="10" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="27dc6" binding="pefilGUI" layout-manager="GridLayoutManager" row-count="13" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints/>
         <properties>
@@ -20,7 +20,7 @@
         <children>
           <vspacer id="69226">
             <constraints>
-              <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <preferred-size width="-1" height="150"/>
               </grid>
             </constraints>
@@ -60,27 +60,24 @@
           </grid>
           <hspacer id="af2bd">
             <constraints>
-              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
           </hspacer>
           <hspacer id="ac52b">
             <constraints>
-              <grid row="9" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </hspacer>
-          <hspacer id="17bb">
-            <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
           </hspacer>
           <vspacer id="e3c52">
             <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+              </grid>
             </constraints>
           </vspacer>
           <component id="c09f7" class="javax.swing.JLabel" binding="Hero">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <icon value="imgs/nullImgCover.jpeg"/>
@@ -90,7 +87,7 @@
           <grid id="9d09a" binding="Tourneys" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="7" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-12510895"/>
@@ -195,133 +192,16 @@
               </component>
             </children>
           </grid>
-          <grid id="92fe7" binding="Publications" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints>
-              <grid row="6" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-12510895"/>
-            </properties>
-            <border type="none"/>
-            <children>
-              <grid id="d28ac" binding="Publication" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="30" left="30" bottom="30" right="30"/>
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-10018694"/>
-                </properties>
-                <border type="none"/>
-                <children>
-                  <component id="3e5aa" class="javax.swing.JLabel" binding="Username">
-                    <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <foreground color="-1"/>
-                      <text value="{UserName}"/>
-                    </properties>
-                  </component>
-                  <component id="a66c7" class="javax.swing.JTextPane" binding="Publication1Txt">
-                    <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="50"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <background color="-10018694"/>
-                      <editable value="false"/>
-                      <foreground color="-1"/>
-                      <selectedTextColor color="-1"/>
-                      <text value="Eiusmod mollit minim officia dolor occaecat officia velit amet velit proident elit laboris laborum ut. Pariatur esse anim cillum nostrud sunt esse aliqua excepteur elit aliquip non anim. Esse duis amet elit. Occaecat duis cupidatat aliquip nulla consequat ullamco. Veniam eu aute minim dolor elit ullamco duis et non nostrud qui eu ipsum ex cupidatat. Incididunt aliquip do voluptate."/>
-                    </properties>
-                  </component>
-                </children>
-              </grid>
-              <grid id="e217c" binding="Publication2" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="30" left="30" bottom="30" right="30"/>
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-10018694"/>
-                </properties>
-                <border type="none"/>
-                <children>
-                  <component id="8c7f3" class="javax.swing.JLabel">
-                    <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <foreground color="-1"/>
-                      <text value="{UserName}"/>
-                    </properties>
-                  </component>
-                  <component id="39d69" class="javax.swing.JTextPane">
-                    <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="50"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <background color="-10018694"/>
-                      <editable value="false"/>
-                      <foreground color="-1"/>
-                      <selectedTextColor color="-1"/>
-                      <text value="Eiusmod mollit minim officia dolor occaecat officia velit amet velit proident elit laboris laborum ut. Pariatur esse anim cillum nostrud sunt esse aliqua excepteur elit aliquip non anim. Esse duis amet elit. Occaecat duis cupidatat aliquip nulla consequat ullamco. Veniam eu aute minim dolor elit ullamco duis et non nostrud qui eu ipsum ex cupidatat. Incididunt aliquip do voluptate."/>
-                    </properties>
-                  </component>
-                </children>
-              </grid>
-              <grid id="928a0" binding="Publication3" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="30" left="30" bottom="30" right="30"/>
-                <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-10018694"/>
-                </properties>
-                <border type="none"/>
-                <children>
-                  <component id="7b09a" class="javax.swing.JLabel">
-                    <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <foreground color="-1"/>
-                      <text value="{UserName}"/>
-                    </properties>
-                  </component>
-                  <component id="65210" class="javax.swing.JTextPane">
-                    <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="50"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <background color="-10018694"/>
-                      <editable value="false"/>
-                      <foreground color="-1"/>
-                      <selectedTextColor color="-1"/>
-                      <text value="Eiusmod mollit minim officia dolor occaecat officia velit amet velit proident elit laboris laborum ut. Pariatur esse anim cillum nostrud sunt esse aliqua excepteur elit aliquip non anim. Esse duis amet elit. Occaecat duis cupidatat aliquip nulla consequat ullamco. Veniam eu aute minim dolor elit ullamco duis et non nostrud qui eu ipsum ex cupidatat. Incididunt aliquip do voluptate."/>
-                    </properties>
-                  </component>
-                </children>
-              </grid>
-            </children>
-          </grid>
           <vspacer id="d0000">
             <constraints>
-              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <preferred-size width="-1" height="50"/>
               </grid>
             </constraints>
           </vspacer>
           <vspacer id="d267f">
             <constraints>
-              <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <preferred-size width="-1" height="50"/>
               </grid>
             </constraints>
@@ -329,7 +209,7 @@
           <grid id="a322" binding="Medallas" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="8" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="11" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-12510895"/>
@@ -444,13 +324,6 @@
               </component>
             </children>
           </grid>
-          <vspacer id="d66bc">
-            <constraints>
-              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <preferred-size width="-1" height="25"/>
-              </grid>
-            </constraints>
-          </vspacer>
           <component id="2795d" class="javax.swing.JButton" binding="Home">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -464,6 +337,82 @@
               <text value=""/>
             </properties>
           </component>
+          <component id="1adc2" class="javax.swing.JTextField" binding="searchField">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="9810a" class="javax.swing.JLabel" binding="nombreCompleto">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="18" style="1"/>
+              <foreground color="-1"/>
+              <text value="{Name}"/>
+            </properties>
+          </component>
+          <grid id="5acbe" binding="Bio" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="30" left="30" bottom="30" right="30"/>
+            <constraints>
+              <grid row="9" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-10018694"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="66891" class="javax.swing.JLabel" binding="bio">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-1"/>
+                  <text value="{Bio}"/>
+                </properties>
+              </component>
+              <component id="e71f4" class="javax.swing.JTextPane" binding="Descripcion">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-10018694"/>
+                  <editable value="false"/>
+                  <foreground color="-1"/>
+                  <selectedTextColor color="-1"/>
+                  <text value="Eiusmod mollit minim officia dolor occaecat officia velit amet velit proident elit laboris laborum ut. Pariatur esse anim cillum nostrud sunt esse aliqua excepteur elit aliquip non anim. Esse duis amet elit. Occaecat duis cupidatat aliquip nulla consequat ullamco. Veniam eu aute minim dolor elit ullamco duis et non nostrud qui eu ipsum ex cupidatat. Incididunt aliquip do voluptate."/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <vspacer id="d66bc">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+                <preferred-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="afe63">
+            <constraints>
+              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="c3a5a">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="25"/>
+                <preferred-size width="-1" height="25"/>
+              </grid>
+            </constraints>
+          </vspacer>
         </children>
       </grid>
     </children>

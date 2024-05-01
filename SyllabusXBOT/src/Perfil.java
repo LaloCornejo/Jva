@@ -4,23 +4,21 @@ public class Perfil extends JFrame {
     private JButton button1;
     private JPanel pefilGUI;
     private JPanel Tourneys;
-    private JPanel Publications;
-    private JPanel Publication;
-    private JTextPane Publication1Txt;
-    private JLabel Username;
-    private JPanel Publication2;
-    private JPanel Publication3;
     private JPanel Medallas;
     private JScrollPane Scroll;
     private JButton Home;
     private JLabel Hero;
+    private JTextField searchField;
+    private JPanel Bio;
+    private JLabel bio;
+    private JTextPane Descripcion;
+    private JLabel nombreCompleto;
 
     public Perfil() {
-        Scroll = new JScrollPane(pefilGUI);
-        setVisible(true);
-        setSize(1500, 950);
         setContentPane(Scroll);
+        setSize(1500, 950);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
 
         Home.addActionListener(e -> {
             setVisible(false);

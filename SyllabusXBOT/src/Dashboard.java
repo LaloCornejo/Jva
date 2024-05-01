@@ -3,12 +3,12 @@ import javax.swing.*;
 
 public class Dashboard extends JFrame {
     private JPanel Dashboard;
-    private JButton miPerfilButton;
-    private JButton newsletterButton;
-    private JButton misClasesButton;
+    private JButton PerfilButton;
+    private JButton anunciosButton;
+    private JButton ClasesButton;
     private JButton calendarioButton;
-    private JButton foroButton;
     private JButton leaderboardButton;
+    private JLabel nameSpace;
 
     public Dashboard() {
         setContentPane(Dashboard);
@@ -16,8 +16,8 @@ public class Dashboard extends JFrame {
         setSize(1500, 950);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
-        misClasesButton.addActionListener(e ->{
-            new MisClases();
+        ClasesButton.addActionListener(e ->{
+            new Clases();
             setVisible(false);
         });
 
@@ -27,19 +27,13 @@ public class Dashboard extends JFrame {
             dispose();
         });
 
-        miPerfilButton.addActionListener(e -> {
+        PerfilButton.addActionListener(e -> {
             new Perfil();
             setVisible(false);
             dispose();
         });
 
-        foroButton.addActionListener(e -> {
-            new Foro();
-            setVisible(false);
-            dispose();
-        });
-
-        newsletterButton.addActionListener(e -> {
+        anunciosButton.addActionListener(e -> {
             new Newsletter();
             setVisible(false);
             dispose();

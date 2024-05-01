@@ -1,17 +1,18 @@
 import javax.swing.*;
 
-public class MisClases extends JFrame{
+public class Clases extends JFrame{
     private JPanel misClases;
     private JButton recursosAdicionalesButton;
     private JButton contactoXCoachButton;
-    private JTextPane MisClases;
+    private JTextPane nombre;
     private JProgressBar progressBar1;
     private JProgressBar progressBar2;
     private JButton homeButton;
+    private JTextField searchField;
 
-    public MisClases(){
+    public Clases(){
         setContentPane(misClases);
-        setTitle("MisClases");
+        setTitle("nombre");
         setSize(1500, 950);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
@@ -33,7 +34,7 @@ public class MisClases extends JFrame{
     }
 
     public static void main(String[] args) {
-        MisClases mC = new MisClases();
+        Clases mC = new Clases();
     }
 
 }
