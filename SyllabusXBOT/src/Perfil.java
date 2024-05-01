@@ -8,12 +8,25 @@ public class Perfil extends JFrame {
     private JPanel Publication;
     private JTextPane Publication1Txt;
     private JLabel Username;
+    private JPanel Publication2;
+    private JPanel Publication3;
+    private JPanel Medallas;
+    private JScrollPane Scroll;
+    private JButton Home;
+    private JLabel Hero;
 
     public Perfil() {
+        Scroll = new JScrollPane(pefilGUI);
         setVisible(true);
         setSize(1500, 950);
-        setContentPane(pefilGUI);
+        setContentPane(Scroll);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        Home.addActionListener(e -> {
+            setVisible(false);
+            new Dashboard();
+            dispose();
+        });
     }
 
     public static void main(String[] args) {

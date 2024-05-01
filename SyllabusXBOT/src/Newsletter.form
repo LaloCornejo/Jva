@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Newsletter">
+  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1158" height="1518"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <scrollpane id="39776" binding="Scroll">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <minimumSize width="-1" height="-1"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="87f26" binding="NewsletterGUI" layout-manager="GridLayoutManager" row-count="10" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints/>
+            <properties>
+              <background color="-12510895"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="2644d" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-12510895"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="fc5bd" class="javax.swing.JButton" binding="button1" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <borderPainted value="false"/>
+                      <contentAreaFilled value="false"/>
+                      <focusPainted value="false"/>
+                      <icon value="imgs/ISO.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="7c130" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <labelFor value="30a1c"/>
+                      <text value="{UserName}"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <hspacer id="c5944">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <vspacer id="e2134">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="e9970" class="javax.swing.JLabel" binding="Hero">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <icon value="imgs/nullImgCover.jpeg"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <vspacer id="94e7d">
+                <constraints>
+                  <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="50"/>
+                  </grid>
+                </constraints>
+              </vspacer>
+              <vspacer id="c629b">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="25"/>
+                  </grid>
+                </constraints>
+              </vspacer>
+              <component id="eed25" class="javax.swing.JButton" binding="Home">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
+                  <icon value="imgs/logo.png"/>
+                  <label value=""/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <hspacer id="64b9a">
+                <constraints>
+                  <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="9c5a8">
+                <constraints>
+                  <grid row="9" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <grid id="48e95" binding="Publication" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="30" left="30" bottom="30" right="30"/>
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-10018694"/>
+                  <foreground color="-10018694"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="febf" class="javax.swing.JLabel" binding="Username">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="9"/>
+                      <foreground color="-1"/>
+                      <text value="{Fecha}"/>
+                    </properties>
+                  </component>
+                  <component id="1befc" class="javax.swing.JTextPane" binding="Publication1Txt">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-10018694"/>
+                      <editable value="false"/>
+                      <foreground color="-1"/>
+                      <selectedTextColor color="-1"/>
+                      <text value="Eiusmod mollit minim officia dolor occaecat officia velit amet velit proident elit laboris laborum ut. Pariatur esse anim cillum nostrud sunt esse aliqua excepteur elit aliquip non anim. Esse duis amet elit. Occaecat duis cupidatat aliquip nulla consequat ullamco. Veniam eu aute minim dolor elit ullamco duis et non nostrud qui eu ipsum ex cupidatat. Incididunt aliquip do voluptate."/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="6483f" binding="Publication2" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="30" left="30" bottom="30" right="30"/>
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-10018694"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="119e2" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="9"/>
+                      <foreground color="-1"/>
+                      <text value="{Fecha}"/>
+                    </properties>
+                  </component>
+                  <component id="5e047" class="javax.swing.JTextPane">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-10018694"/>
+                      <editable value="false"/>
+                      <foreground color="-1"/>
+                      <selectedTextColor color="-1"/>
+                      <text value="Eiusmod mollit minim officia dolor occaecat officia velit amet velit proident elit laboris laborum ut. Pariatur esse anim cillum nostrud sunt esse aliqua excepteur elit aliquip non anim. Esse duis amet elit. Occaecat duis cupidatat aliquip nulla consequat ullamco. Veniam eu aute minim dolor elit ullamco duis et non nostrud qui eu ipsum ex cupidatat. Incididunt aliquip do voluptate."/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="6bc96" binding="Publication3" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="30" left="30" bottom="30" right="30"/>
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-10018694"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="e00b5" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="9"/>
+                      <foreground color="-1"/>
+                      <text value="{Fecha}"/>
+                    </properties>
+                  </component>
+                  <component id="f7536" class="javax.swing.JTextPane">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-10018694"/>
+                      <editable value="false"/>
+                      <foreground color="-1"/>
+                      <selectedTextColor color="-1"/>
+                      <text value="Eiusmod mollit minim officia dolor occaecat officia velit amet velit proident elit laboris laborum ut. Pariatur esse anim cillum nostrud sunt esse aliqua excepteur elit aliquip non anim. Esse duis amet elit. Occaecat duis cupidatat aliquip nulla consequat ullamco. Veniam eu aute minim dolor elit ullamco duis et non nostrud qui eu ipsum ex cupidatat. Incididunt aliquip do voluptate."/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="1efdf" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="30" left="30" bottom="30" right="30"/>
+                <constraints>
+                  <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-10018694"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="a9cd" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="9"/>
+                      <foreground color="-1"/>
+                      <text value="{Fecha}"/>
+                    </properties>
+                  </component>
+                  <component id="9eee4" class="javax.swing.JTextPane">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-10018694"/>
+                      <editable value="false"/>
+                      <foreground color="-1"/>
+                      <selectedTextColor color="-1"/>
+                      <text value="Eiusmod mollit minim officia dolor occaecat officia velit amet velit proident elit laboris laborum ut. Pariatur esse anim cillum nostrud sunt esse aliqua excepteur elit aliquip non anim. Esse duis amet elit. Occaecat duis cupidatat aliquip nulla consequat ullamco. Veniam eu aute minim dolor elit ullamco duis et non nostrud qui eu ipsum ex cupidatat. Incididunt aliquip do voluptate."/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="ab161" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="30" left="30" bottom="30" right="30"/>
+                <constraints>
+                  <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-10018694"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="ca838" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="9"/>
+                      <foreground color="-1"/>
+                      <text value="{Fecha}"/>
+                    </properties>
+                  </component>
+                  <component id="505e6" class="javax.swing.JTextPane">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-10018694"/>
+                      <editable value="false"/>
+                      <foreground color="-1"/>
+                      <selectedTextColor color="-1"/>
+                      <text value="Eiusmod mollit minim officia dolor occaecat officia velit amet velit proident elit laboris laborum ut. Pariatur esse anim cillum nostrud sunt esse aliqua excepteur elit aliquip non anim. Esse duis amet elit. Occaecat duis cupidatat aliquip nulla consequat ullamco. Veniam eu aute minim dolor elit ullamco duis et non nostrud qui eu ipsum ex cupidatat. Incididunt aliquip do voluptate."/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>

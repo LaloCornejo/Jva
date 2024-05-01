@@ -26,6 +26,30 @@ public class Dashboard extends JFrame {
             setVisible(false);
             dispose();
         });
+
+        miPerfilButton.addActionListener(e -> {
+            new Perfil();
+            setVisible(false);
+            dispose();
+        });
+
+        foroButton.addActionListener(e -> {
+            new Foro();
+            setVisible(false);
+            dispose();
+        });
+
+        newsletterButton.addActionListener(e -> {
+            new Newsletter();
+            setVisible(false);
+            dispose();
+        });
+
+        leaderboardButton.addActionListener(e -> {
+            new Leaderboard();
+            setVisible(false);
+            dispose();
+        });
     }
 
     public static void main(String[] args) {

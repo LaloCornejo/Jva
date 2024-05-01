@@ -29,12 +29,12 @@ public class Login extends JFrame {
             char[] password = passwordField1.getPassword();
 
             if (usuario.equals("root") && passswordCheck(password)) {
-                Dashboard dash = new Dashboard();
+                new Dashboard();
                 setVisible(false);
                 dispose();
             }else {
-                textPane1.setText("Error: Usuario o contrasena invalido");
                 textPane1.setForeground(Color.red);
+                textPane1.setText("Error: Usuario o contrasena invalido");
             }
             System.out.println("Login");
             System.out.println(usuario);
