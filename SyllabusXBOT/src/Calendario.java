@@ -16,13 +16,14 @@ public class Calendario extends JFrame {
     private JButton a20Button;
     private JButton a25Button;
     private JButton a29Button;
-    private JPanel Febrero;
-    private JPanel Marzo;
-    private JPanel Abril;
-    private JPanel Mayo;
-    private JPanel Junio;
+    private JPanel Mes1;
+    private JPanel Mes2;
+    private JPanel Mes3;
+    private JPanel Mes4;
+    private JPanel Mes5;
     private JButton estadoDeCuentaButton;
     private JTextField searchField;
+    private JLabel nombre;
 
     public Calendario() {
         setContentPane(Calendario);

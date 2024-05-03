@@ -85,10 +85,10 @@
             </properties>
             <border type="none"/>
             <children>
-              <grid id="1650d" binding="Febrero" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="1650d" binding="Mes1" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="Febrero"/>
+                  <tabbedpane title="Mes1"/>
                 </constraints>
                 <properties>
                   <background color="-15069147"/>
@@ -656,10 +656,10 @@
                   </grid>
                 </children>
               </grid>
-              <grid id="9809a" binding="Marzo" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="9809a" binding="Mes2" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="Marzo"/>
+                  <tabbedpane title="Mes2"/>
                 </constraints>
                 <properties>
                   <background color="-15069147"/>
@@ -1227,10 +1227,10 @@
                   </grid>
                 </children>
               </grid>
-              <grid id="54fd4" binding="Abril" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="54fd4" binding="Mes3" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="Abril"/>
+                  <tabbedpane title="Mes3"/>
                 </constraints>
                 <properties>
                   <background color="-15069147"/>
@@ -1798,10 +1798,10 @@
                   </grid>
                 </children>
               </grid>
-              <grid id="422b1" binding="Mayo" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="422b1" binding="Mes4" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="Mayo"/>
+                  <tabbedpane title="Mes4"/>
                 </constraints>
                 <properties>
                   <background color="-15069147"/>
@@ -2370,10 +2370,10 @@
                   </grid>
                 </children>
               </grid>
-              <grid id="bec05" binding="Junio" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="bec05" binding="Mes5" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="Junio"/>
+                  <tabbedpane title="Mes5"/>
                 </constraints>
                 <properties>
                   <background color="-15069147"/>
@@ -3024,7 +3024,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="91b7b" class="javax.swing.JLabel">
+          <component id="91b7b" class="javax.swing.JLabel" binding="nombre">
             <constraints>
               <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
             </constraints>

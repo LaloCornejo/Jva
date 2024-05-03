@@ -9,6 +9,11 @@ public class Clases extends JFrame{
     private JProgressBar progressBar2;
     private JButton homeButton;
     private JTextField searchField;
+    public int P1 = 0, P2 = 0;
+    private JButton modificaAvanceC1Button;
+    private JButton modificaAvanceC2Button;
+    private JLabel campo1Button;
+    private JLabel campo2Button;
 
     public Clases(){
         setContentPane(misClases);
@@ -17,9 +22,7 @@ public class Clases extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
 
-        int[] prog = new int[2];
-        prog[0] = 90;
-        prog[1] = 47;
+        actualizarCampos();
 
         homeButton.addActionListener(e -> {
             new Dashboard();
@@ -27,10 +30,31 @@ public class Clases extends JFrame{
             dispose();
         });
 
-        progressBar1.setValue(prog[0]);
-        progressBar1.setStringPainted(true);
-        progressBar2.setValue(prog[1]);
-        progressBar2.setStringPainted(true);
+        modificaAvanceC1Button.addActionListener(e -> {
+            setModificaAvanceC1Button();
+        });
+
+        modificaAvanceC2Button.addActionListener(e -> {
+            setModificaAvanceC2Button();
+        });
+    }
+
+    public void setModificaAvanceC1Button() {
+        new modificaCampo();
+        actualizarCampos();
+    }
+
+    public void setModificaAvanceC2Button() {
+        new modificaCampo();
+        P2 = modificaCampo.valorCampo;
+        System.out.println(P1);
+        System.out.println(P2);
+        actualizarCampos();
+    }
+
+    public void actualizarCampos() {
+        progressBar2.setValue(P1);
+        progressBar1.setValue(P2);
     }
 
     public static void main(String[] args) {
