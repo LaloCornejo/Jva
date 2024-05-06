@@ -13,7 +13,7 @@ public class Newsletter extends JFrame {
     private JPanel Publication3;
 
 
-    public Newsletter() {
+    public Newsletter(int id) {
         setContentPane(Scroll);
         setTitle("Newsletter");
         setSize(1500, 950);
@@ -21,13 +21,13 @@ public class Newsletter extends JFrame {
         setVisible(true);
 
         Home.addActionListener(e -> {
-            new Dashboard();
+            new Dashboard(id);
             setVisible(false);
             dispose();
         });
     }
 
-    public static void main(String[] args) {
-        new Newsletter();
-    }
+//    public static void main(String[] args) {
+//        new Newsletter(id);
+//    }
 }

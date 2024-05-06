@@ -2981,7 +2981,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="e2436" class="javax.swing.JLabel">
+              <component id="e2436" class="javax.swing.JLabel" binding="userName">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="4" fill="0" indent="0" use-parent-layout="false">
                     <preferred-size width="101" height="17"/>

@@ -134,7 +134,7 @@
                   <indeterminate value="false"/>
                 </properties>
               </component>
-              <component id="95701" class="javax.swing.JLabel" binding="campo1Button">
+              <component id="95701" class="javax.swing.JLabel" binding="campo1Label">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -173,7 +173,7 @@
                   <indeterminate value="false"/>
                 </properties>
               </component>
-              <component id="fbfa6" class="javax.swing.JLabel" binding="campo2Button">
+              <component id="fbfa6" class="javax.swing.JLabel" binding="campo2Label">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -213,7 +213,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="3f623" class="javax.swing.JLabel">
+              <component id="3f623" class="javax.swing.JLabel" binding="userName">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="4" fill="0" indent="0" use-parent-layout="false">
                     <preferred-size width="101" height="17"/>

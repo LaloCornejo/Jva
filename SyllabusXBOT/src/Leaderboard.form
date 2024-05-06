@@ -40,7 +40,7 @@
                   <text value=""/>
                 </properties>
               </component>
-              <component id="2af1e" class="javax.swing.JLabel">
+              <component id="2af1e" class="javax.swing.JLabel" binding="userNamePersonal">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -124,7 +124,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="3532" class="javax.swing.JLabel" binding="userName">
+                      <component id="3532" class="javax.swing.JLabel" binding="UN">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="381" height="20"/>
@@ -137,7 +137,7 @@
                           <text value="{UserName}"/>
                         </properties>
                       </component>
-                      <component id="d3eac" class="javax.swing.JLabel" binding="Place">
+                      <component id="d3eac" class="javax.swing.JLabel" binding="P">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="150" height="-1"/>
@@ -146,10 +146,10 @@
                         <properties>
                           <font name="JetBrains Mono" size="14" style="1"/>
                           <foreground color="-1"/>
-                          <text value="{Place}"/>
+                          <text value="10"/>
                         </properties>
                       </component>
-                      <component id="6809e" class="javax.swing.JLabel" binding="Elo">
+                      <component id="6809e" class="javax.swing.JLabel" binding="E">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="200" height="-1"/>
@@ -176,7 +176,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="b33a6" class="javax.swing.JLabel">
+                      <component id="b33a6" class="javax.swing.JLabel" binding="UN1">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="381" height="20"/>
@@ -189,7 +189,7 @@
                           <text value="{UserName}"/>
                         </properties>
                       </component>
-                      <component id="cba36" class="javax.swing.JLabel">
+                      <component id="cba36" class="javax.swing.JLabel" binding="P1">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="150" height="-1"/>
@@ -198,10 +198,10 @@
                         <properties>
                           <font name="JetBrains Mono" size="14" style="1"/>
                           <foreground color="-1"/>
-                          <text value="{Place}"/>
+                          <text value="9"/>
                         </properties>
                       </component>
-                      <component id="d9c53" class="javax.swing.JLabel">
+                      <component id="d9c53" class="javax.swing.JLabel" binding="E1">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="200" height="-1"/>
@@ -228,7 +228,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="b3e3c" class="javax.swing.JLabel">
+                      <component id="b3e3c" class="javax.swing.JLabel" binding="UN2">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="381" height="20"/>
@@ -241,7 +241,7 @@
                           <text value="{UserName}"/>
                         </properties>
                       </component>
-                      <component id="6908e" class="javax.swing.JLabel">
+                      <component id="6908e" class="javax.swing.JLabel" binding="P2">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="150" height="-1"/>
@@ -250,10 +250,10 @@
                         <properties>
                           <font name="JetBrains Mono" size="14" style="1"/>
                           <foreground color="-1"/>
-                          <text value="{Place}"/>
+                          <text value="8"/>
                         </properties>
                       </component>
-                      <component id="61a6f" class="javax.swing.JLabel">
+                      <component id="61a6f" class="javax.swing.JLabel" binding="E2">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="200" height="-1"/>
@@ -280,7 +280,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="691f8" class="javax.swing.JLabel">
+                      <component id="691f8" class="javax.swing.JLabel" binding="UN3">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="381" height="20"/>
@@ -293,7 +293,7 @@
                           <text value="{UserName}"/>
                         </properties>
                       </component>
-                      <component id="4da24" class="javax.swing.JLabel">
+                      <component id="4da24" class="javax.swing.JLabel" binding="P3">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="150" height="-1"/>
@@ -302,10 +302,10 @@
                         <properties>
                           <font name="JetBrains Mono" size="14" style="1"/>
                           <foreground color="-1"/>
-                          <text value="{Place}"/>
+                          <text value="7"/>
                         </properties>
                       </component>
-                      <component id="d1dc1" class="javax.swing.JLabel">
+                      <component id="d1dc1" class="javax.swing.JLabel" binding="E3">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="200" height="-1"/>
@@ -332,7 +332,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="81be2" class="javax.swing.JLabel">
+                      <component id="81be2" class="javax.swing.JLabel" binding="UN4">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="381" height="20"/>
@@ -354,10 +354,10 @@
                         <properties>
                           <font name="JetBrains Mono" size="14" style="1"/>
                           <foreground color="-1"/>
-                          <text value="{Place}"/>
+                          <text value="6"/>
                         </properties>
                       </component>
-                      <component id="d828f" class="javax.swing.JLabel">
+                      <component id="d828f" class="javax.swing.JLabel" binding="E4">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="200" height="-1"/>
@@ -384,7 +384,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="67ce6" class="javax.swing.JLabel">
+                      <component id="67ce6" class="javax.swing.JLabel" binding="UN5">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="381" height="20"/>
@@ -406,10 +406,10 @@
                         <properties>
                           <font name="JetBrains Mono" size="14" style="1"/>
                           <foreground color="-1"/>
-                          <text value="{Place}"/>
+                          <text value="5"/>
                         </properties>
                       </component>
-                      <component id="5c855" class="javax.swing.JLabel">
+                      <component id="5c855" class="javax.swing.JLabel" binding="E5">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="200" height="-1"/>
@@ -436,7 +436,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="cbde7" class="javax.swing.JLabel">
+                      <component id="cbde7" class="javax.swing.JLabel" binding="UN6">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="381" height="20"/>
@@ -458,10 +458,10 @@
                         <properties>
                           <font name="JetBrains Mono" size="14" style="1"/>
                           <foreground color="-1"/>
-                          <text value="{Place}"/>
+                          <text value="4"/>
                         </properties>
                       </component>
-                      <component id="82da7" class="javax.swing.JLabel">
+                      <component id="82da7" class="javax.swing.JLabel" binding="E6">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="200" height="-1"/>
@@ -488,7 +488,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="1b77e" class="javax.swing.JLabel">
+                      <component id="1b77e" class="javax.swing.JLabel" binding="UN7">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="381" height="20"/>
@@ -510,10 +510,10 @@
                         <properties>
                           <font name="JetBrains Mono" size="14" style="1"/>
                           <foreground color="-1"/>
-                          <text value="{Place}"/>
+                          <text value="3"/>
                         </properties>
                       </component>
-                      <component id="68043" class="javax.swing.JLabel">
+                      <component id="68043" class="javax.swing.JLabel" binding="E7">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="200" height="-1"/>
@@ -540,7 +540,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="da765" class="javax.swing.JLabel">
+                      <component id="da765" class="javax.swing.JLabel" binding="UN8">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="381" height="20"/>
@@ -562,10 +562,10 @@
                         <properties>
                           <font name="JetBrains Mono" size="14" style="1"/>
                           <foreground color="-1"/>
-                          <text value="{Place}"/>
+                          <text value="2"/>
                         </properties>
                       </component>
-                      <component id="29d69" class="javax.swing.JLabel">
+                      <component id="29d69" class="javax.swing.JLabel" binding="E8">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="200" height="-1"/>
@@ -592,7 +592,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="691be" class="javax.swing.JLabel">
+                      <component id="691be" class="javax.swing.JLabel" binding="UN9">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <preferred-size width="381" height="20"/>
@@ -614,10 +614,10 @@
                         <properties>
                           <font name="JetBrains Mono" size="14" style="1"/>
                           <foreground color="-1"/>
-                          <text value="{Place}"/>
+                          <text value="1"/>
                         </properties>
                       </component>
-                      <component id="40297" class="javax.swing.JLabel">
+                      <component id="40297" class="javax.swing.JLabel" binding="E9">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <maximum-size width="200" height="-1"/>
