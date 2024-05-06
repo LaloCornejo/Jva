@@ -55,9 +55,7 @@ public class EstadoDeCuenta extends JFrame {
 
         fechaActual.setText(new SimpleDateFormat("dd.MM.yyyy").format(new Date()));
 
-        Pago.addActionListener(e -> {
-            pagoWOO(idEstPago);
-        });
+        Pago.addActionListener(e -> pagoWOO(idEstPago));
 
         eSesion.addActionListener(e -> {
             if (!statusSesion) {
@@ -115,7 +113,10 @@ public class EstadoDeCuenta extends JFrame {
     }
 
     public void pagoWOO(int idEstPago) {
-        getValorDB();
+        getValorDB(idEstPago);
+        System.out.println(idEstPago);
+        System.out.println(valorDB);
+        System.out.println(mensualidadDB);
         if (valorDB >= 0) {
             JOptionPane.showMessageDialog(null, "No hay saldo pendiente");
             return;
@@ -131,14 +132,17 @@ public class EstadoDeCuenta extends JFrame {
             double saldo = resultSet.getDouble("saldoValor");
             double saldoNuevo = saldo + mensualidadDB;
             statement.executeUpdate(
-                    "UPDATE estadoPago SET saldoValor = '" + saldoNuevo + "' WHERE idAlumno = '" + 1 + "'");
+                    "UPDATE estadoPago SET saldoValor = '" + saldoNuevo + "' WHERE idEstPago = '" + idEstPago + "'");
             SaldoValor.setText("$" + saldoNuevo);
         } catch (Exception exception) {
             exception.printStackTrace();
         }
+        getValorDB(idEstPago);
+        System.out.println("Pago :)");
+        System.out.println(valorDB);
     }
 
-    private void getValorDB() {
+    private void getValorDB(int idEstPago){
         Connection connection;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

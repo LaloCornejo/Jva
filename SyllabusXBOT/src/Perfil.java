@@ -76,7 +76,7 @@ public class Perfil extends JFrame {
                             Descripcion.setText(resultSet.getString("descripcion"));
                             String premiosString = resultSet.getString("premios");
 
-                            int conta = 0;
+                            int conta;
                             if (premiosString != null) {
                                 String[] indiPremios = premiosString.split(",");
                                 conta = 0;
@@ -172,7 +172,7 @@ public class Perfil extends JFrame {
                             nombreCompleto.setText(resultSet.getString("nombre"));
                             Descripcion.setText(resultSet.getString("descripcion"));
                             String premiosString = resultSet.getString("premios");
-                            int conta = 0;
+                            int conta;
                             if (premiosString != null) {
                                 String[] indiPremios = premiosString.split(",");
                                 conta = 0;
@@ -276,21 +276,37 @@ public class Perfil extends JFrame {
         nombreCompleto.setText("");
         Descripcion.setText("");
         M1.setText("");
+        M1.setIcon(null);
         M2.setText("");
+        M2.setIcon(null);
         M3.setText("");
+        M3.setIcon(null);
         M4.setText("");
+        M4.setIcon(null);
         M5.setText("");
+        M5.setIcon(null);
         M6.setText("");
+        M6.setIcon(null);
         M7.setText("");
+        M7.setIcon(null);
         M8.setText("");
+        M8.setIcon(null);
         T1.setText("");
+        T1.setIcon(null);
         T2.setText("");
+        T2.setIcon(null);
         T3.setText("");
+        T3.setIcon(null);
         T4.setText("");
+        T4.setIcon(null);
         T5.setText("");
+        T5.setIcon(null);
         T6.setText("");
+        T6.setIcon(null);
         T7.setText("");
+        T7.setIcon(null);
         T8.setText("");
+        T8.setIcon(null);
     }
 
 //    public static void main(String[] args) {

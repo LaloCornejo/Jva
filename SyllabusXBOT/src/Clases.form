@@ -261,6 +261,8 @@
             </constraints>
             <properties>
               <background color="-7995137"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
               <focusPainted value="false"/>
               <foreground color="-1"/>
               <text value="Modifica Avance"/>
@@ -272,6 +274,9 @@
             </constraints>
             <properties>
               <background color="-7995137"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <enabled value="true"/>
               <focusPainted value="false"/>
               <foreground color="-1"/>
               <text value="Modifica Avance"/>
