@@ -365,8 +365,4 @@ public class AdminDashboard extends JFrame {
             return false;
         }
     }
-
-    public static void main(String[] args) {
-        new AdminDashboard(2);
-    }
 }
