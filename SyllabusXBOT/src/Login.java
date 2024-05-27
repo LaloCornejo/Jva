@@ -92,13 +92,18 @@ public class Login extends JFrame {
             String user = resultSet.getString("user");
             char[] pass = resultSet.getString("password").toCharArray();
             int id = resultSet.getInt("idPersonal");
+            int lvl = resultSet.getInt("nivel");
 
             System.out.println("User: " + user);
             System.out.println("Corr Password: " + Arrays.toString(pass));
             System.out.println("ID: " + id);
 
             if (usuario.equals(user) && passswordCheck(password, pass)) {
-                new Dashboard(id);
+                if(lvl != 1){
+                    new Dashboard(id);
+                }else {
+                    new AdminDashboard(id);
+                }
                 setVisible(false);
                 dispose();
             } else {
