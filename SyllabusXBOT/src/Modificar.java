@@ -28,7 +28,7 @@ public class Modificar extends JFrame {
     private Date fechaNac;
     private int nivel;
 
-    Modificar(int idUsuario, int id, int type, AdminDashboard instance) {
+    Modificar(int idUsuario, int idModificar, int type, AdminDashboard instance) {
         this.instance = instance;
         setContentPane(modificarGUI);
         setTitle("Modificar");
@@ -48,11 +48,11 @@ public class Modificar extends JFrame {
             String user = resultSet.getString("user");
             usernameSpace.setText(user);
 
-            if (type == 1) {
+            if (type == 2) {
                 PersonalForm.setVisible(true);
                 AlumnoForm.setVisible(false);
                 comboBox1.setVisible(true);
-                getData(id, 1);
+                getData(idModificar, 2);
                 nombrePersonal.setText(nombre);
                 telefonoPersonal.setText(telefono);
                 emailPersonal.setText(email);
@@ -62,7 +62,7 @@ public class Modificar extends JFrame {
                 PersonalForm.setVisible(false);
                 AlumnoForm.setVisible(true);
                 comboBox1.setVisible(false);
-                getData(id, 2);
+                getData(idModificar, 1);
                 nombreField.setText(nombre);
                 telTutText.setText(telefono);
                 JDateChooser1.setDate(fechaNac);
@@ -73,7 +73,10 @@ public class Modificar extends JFrame {
             JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
         }
 
-        updateButton.addActionListener(e -> updateData(id, type));
+        updateButton.addActionListener(e -> {
+            updateData(idModificar, type);
+            dispose();
+        });
 
         homeButton.addActionListener(e -> {
             setVisible(false);
@@ -85,8 +88,8 @@ public class Modificar extends JFrame {
     private void getData(int id, int type) {
         Connection connection;
         String SQL = switch (type) {
-            case 1 -> "select * from personal where idPersonal = '" + id + "'";
-            case 2 -> "select * from alumno where idAlumno = '" + id + "'";
+            case 1 -> "select * from alumno where idAlumno = '" + id + "'";
+            case 2 -> "select * from personal where idPersonal = '" + id + "'";
             default -> "";
         };
         try {
@@ -97,25 +100,17 @@ public class Modificar extends JFrame {
             resultSet.next();
 
             switch (type) {
-                case 2:
+                case 1:
                     nombre = resultSet.getString("nombre") + " " + resultSet.getString("appellido");
                     telefono = resultSet.getString("telefonoTutor");
-                    if (!esNumero(telefono)) {
-                        JOptionPane.showMessageDialog(null, "Por favor ingrese un número de teléfono válido");
-                        return;
-                    }
                     fechaNac = resultSet.getDate("fechaNac");
 
                     break;
-                case 1:
+                case 2:
                     nombre = resultSet.getString("nombre");
                     usuario = resultSet.getString("user");
                     email = resultSet.getString("email");
                     telefono = resultSet.getString("telefono");
-                    if (!esNumero(telefono)) {
-                        JOptionPane.showMessageDialog(null, "Por favor ingrese un número de teléfono válido");
-                        return;
-                    }
                     nivel = resultSet.getInt("nivel");
                     break;
             }
@@ -134,21 +129,29 @@ public class Modificar extends JFrame {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/syllabus", "root", "password");
             PreparedStatement PS;
             switch (type) {
-                case 1:
+                case 2:
                     SQL = "UPDATE personal SET nombre = ?, user = ?, telefono = ?, email = ?, password = ?  WHERE idPersonal = '" + id + "'";
                     PS = connection.prepareStatement(SQL);
                     PS.setString(1, nombrePersonal.getText());
                     PS.setString(2, usuarioPersonal.getText());
+                    if (!esNumero(telefonoPersonal.getText())) {
+                        JOptionPane.showMessageDialog(null, "Por favor ingrese un número de teléfono válido updateData");
+                        return;
+                    }
                     PS.setString(3, telefonoPersonal.getText());
                     PS.setString(4, emailPersonal.getText());
                     PS.setString(5, "root");
                     break;
-                case 2:
+                case 1:
                     SQL = "UPDATE alumno SET nombre = ?, telefonoTutor = ?, appellido = ?, fechaNac = ? WHERE idAlumno = '" + id + "'";
                     PS = connection.prepareStatement(SQL);
                     String nombreString = nombreField.getText();
                     String[] nombreArray = nombreString.split(" ");
                     PS.setString(1, nombreArray[0]);
+                    if (!esNumero(telTutText.getText())) {
+                        JOptionPane.showMessageDialog(null, "Por favor ingrese un número de teléfono válido updateData");
+                        return;
+                    }
                     PS.setString(2, telTutText.getText());
                     PS.setString(3, nombreArray[1]);
                     PS.setDate(4, new java.sql.Date(JDateChooser1.getDate().getTime()));
@@ -159,9 +162,7 @@ public class Modificar extends JFrame {
             PS.executeUpdate();
             connection.close();
             instance.listar();
-            setVisible(false);
             dispose();
-            instance.setVisible(true);
         } catch (SQLException | ClassNotFoundException e) {
             System.out.println("Error: " + e.getMessage());
             JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
@@ -170,7 +171,7 @@ public class Modificar extends JFrame {
 
     private boolean esNumero(String input) {
         try {
-            Integer.parseInt(input);
+            Long.parseLong(input);
             return true;
         } catch (NumberFormatException e) {
             return false;

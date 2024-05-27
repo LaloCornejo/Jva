@@ -145,7 +145,7 @@ private void insertDataAlumno(String nombre, String apellido, String TelefonoT, 
 }
     private boolean esNumero(String input) {
         try {
-            Integer.parseInt(input);
+            Long.parseLong(input);
             return true;
         } catch (NumberFormatException e) {
             return false;

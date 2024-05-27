@@ -1,10 +1,7 @@
 //Jesus Eduardo Cornejo Clavel
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.sql.*;
 import java.util.Objects;
 
@@ -74,41 +71,79 @@ public class AdminDashboard extends JFrame {
                     B.setVisible(true);
                     assert selected != null;
                     tableBusqueda.setModel(Objects.requireNonNull(buscar(input, selected)));
-                    clear();
+                    clearSearchBar();
                 }
             }
         });
 
         tablePersonal.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
-                int row = tablePersonal.rowAtPoint(evt.getPoint());
-                int idPersona = (int) tablePersonal.getValueAt(row, 0);
-                modificarButton.setVisible(true);
-                borrarButton.setVisible(true);
-                modificarButton.addActionListener(e -> updateData(id, idPersona, 2));
-                borrarButton.addActionListener(e -> errase(idPersona, 2));
+                if (tabbedPane1.getSelectedComponent().equals(P)) {
+                    System.out.println("aquiPersonal");
+                    int row = tablePersonal.rowAtPoint(evt.getPoint());
+                    int idPersona;
+                    idPersona = (int) tablePersonal.getValueAt(row, 0);
+                    System.out.println(idPersona);
+                    modificarButton.setVisible(true);
+                    borrarButton.setVisible(true);
+
+                    for (ActionListener al : modificarButton.getActionListeners()) {
+                        modificarButton.removeActionListener(al);
+                    }
+                    for (ActionListener al : borrarButton.getActionListeners()) {
+                        borrarButton.removeActionListener(al);
+                    }
+
+                    modificarButton.addActionListener(e -> updateData(id, idPersona, 2));
+                    borrarButton.addActionListener(e -> errase(idPersona, 2));
+                }
             }
         });
 
         tableAlumnos.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
-                int row = tableAlumnos.rowAtPoint(evt.getPoint());
-                int idPersona = (int) tableAlumnos.getValueAt(row, 0);
-                modificarButton.setVisible(true);
-                borrarButton.setVisible(true);
-                modificarButton.addActionListener(e -> updateData(id, idPersona, 1));
-                borrarButton.addActionListener(e -> errase(idPersona, 1));
+                if (tabbedPane1.getSelectedComponent().equals(A)) {
+                    System.out.println("aquiAlumno");
+                    int row = tableAlumnos.rowAtPoint(evt.getPoint());
+                    int idPersona;
+                    idPersona = (int) tableAlumnos.getValueAt(row, 0);
+                    System.out.println(idPersona);
+                    modificarButton.setVisible(true);
+                    borrarButton.setVisible(true);
+
+                    for (ActionListener al : modificarButton.getActionListeners()) {
+                        modificarButton.removeActionListener(al);
+                    }
+                    for (ActionListener al : borrarButton.getActionListeners()) {
+                        borrarButton.removeActionListener(al);
+                    }
+
+                    modificarButton.addActionListener(e -> updateData(id, idPersona, 1));
+                    borrarButton.addActionListener(e -> errase(idPersona, 1));
+                }
             }
         });
 
         tableBusqueda.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
-                int row = tableBusqueda.rowAtPoint(evt.getPoint());
-                int idPersona = (int) tableBusqueda.getValueAt(row, 0);
-                modificarButton.setVisible(true);
-                borrarButton.setVisible(true);
-                modificarButton.addActionListener(e -> updateData(id, idPersona, comboBox1.getSelectedIndex() + 1));
-                borrarButton.addActionListener(e -> errase(idPersona, comboBox1.getSelectedIndex() + 1));
+                if (tabbedPane1.getSelectedComponent().equals(B)) {
+                    int row = tableBusqueda.rowAtPoint(evt.getPoint());
+                    int idPersona;
+                    idPersona = (int) tableBusqueda.getValueAt(row, 0);
+                    System.out.println(idPersona);
+                    modificarButton.setVisible(true);
+                    borrarButton.setVisible(true);
+
+                    for (ActionListener al : modificarButton.getActionListeners()) {
+                        modificarButton.removeActionListener(al);
+                    }
+                    for (ActionListener al : borrarButton.getActionListeners()) {
+                        borrarButton.removeActionListener(al);
+                    }
+
+                    modificarButton.addActionListener(e -> updateData(id, idPersona, comboBox1.getSelectedIndex() + 1));
+                    borrarButton.addActionListener(e -> errase(idPersona, comboBox1.getSelectedIndex() + 1));
+                }
             }
         });
     }
@@ -224,6 +259,7 @@ public class AdminDashboard extends JFrame {
     }
 
     private void updateData(int idUsuario, int id, int type) {
+        System.out.println("aqui: " + id + " " + type + " " + idUsuario);
         new Modificar(idUsuario, id, type, this);
     }
 
@@ -317,16 +353,20 @@ public class AdminDashboard extends JFrame {
         return model;
     }
 
-    private void clear() {
+    private void clearSearchBar() {
         searchField.setText("");
     }
 
     private boolean esNumero(String input) {
         try {
-            Integer.parseInt(input);
+            Long.parseLong(input);
             return true;
         } catch (NumberFormatException e) {
             return false;
         }
+    }
+
+    public static void main(String[] args) {
+        new AdminDashboard(2);
     }
 }
